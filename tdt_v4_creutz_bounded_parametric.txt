@@ -1,0 +1,73 @@
+Bounded Creutz demon, five-knot parametric fields; Emax=20; Ntraj=20000
+
+BATH 8 N 16 X0 1010101011001011
+MODE SYSTEM_ONLY
+A=0 p_sys=0.00365 hits=73 p_full=5e-05 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=13.2428 cap_fraction=0.11975
+A=0.5 p_sys=0.0037 hits=74 p_full=5e-05 Wsys=0.0114040816 Wbath=0 Csys=6.25 Cbath=0 demon_mean=12.9676 cap_fraction=0.06015
+A=1 p_sys=0.00395 hits=79 p_full=5e-05 Wsys=0.0168040816 Wbath=0 Csys=25 Cbath=0 demon_mean=12.91995 cap_fraction=0.0622
+A=2 p_sys=0.004 hits=80 p_full=5e-05 Wsys=0.0455836735 Wbath=0 Csys=100 Cbath=0 demon_mean=12.764 cap_fraction=0.06225
+A=4 p_sys=0.0044 hits=88 p_full=0 Wsys=-0.0317877551 Wbath=0 Csys=400 Cbath=0 demon_mean=12.57845 cap_fraction=0.0599
+A=8 p_sys=0.0056 hits=112 p_full=5e-05 Wsys=-0.259918367 Wbath=0 Csys=1600 Cbath=0 demon_mean=12.5414 cap_fraction=0.05995
+A=12 p_sys=0.0065 hits=130 p_full=0.0001 Wsys=-0.418040816 Wbath=0 Csys=3600 Cbath=0 demon_mean=12.53695 cap_fraction=0.0631
+MODE SYSTEM_PLUS_BATH
+A=0 p_sys=0.00355 hits=71 p_full=5e-05 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=13.1532 cap_fraction=0.1139
+A=0.5 p_sys=0.00385 hits=77 p_full=5e-05 Wsys=0.00273673469 Wbath=0.00147755102 Csys=6.25 Cbath=50 demon_mean=12.901 cap_fraction=0.0598
+A=1 p_sys=0.00345 hits=69 p_full=0 Wsys=0.0180204082 Wbath=-0.0131387755 Csys=25 Cbath=200 demon_mean=12.7042 cap_fraction=0.06015
+A=2 p_sys=0.00345 hits=69 p_full=5e-05 Wsys=0.00836734694 Wbath=-0.051755102 Csys=100 Cbath=800 demon_mean=12.5373 cap_fraction=0.0597
+A=4 p_sys=0.00455 hits=91 p_full=5e-05 Wsys=-0.011444898 Wbath=-0.0823836735 Csys=400 Cbath=3200 demon_mean=12.44195 cap_fraction=0.0605
+A=8 p_sys=0.005 hits=100 p_full=5e-05 Wsys=-0.144097959 Wbath=-0.297828571 Csys=1600 Cbath=12800 demon_mean=12.3787 cap_fraction=0.06425
+A=12 p_sys=0.00545 hits=109 p_full=0 Wsys=-0.277077551 Wbath=-0.563167347 Csys=3600 Cbath=28800 demon_mean=12.25795 cap_fraction=0.06405
+
+BATH 16 N 24 X0 101010101100101100100100
+MODE SYSTEM_ONLY
+A=0 p_sys=0.00555 hits=111 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=14.8587 cap_fraction=0.18915
+A=0.5 p_sys=0.0057 hits=114 p_full=0 Wsys=0.00243469388 Wbath=0 Csys=6.25 Cbath=0 demon_mean=14.4055 cap_fraction=0.0953
+A=1 p_sys=0.0061 hits=122 p_full=0 Wsys=-0.000371428571 Wbath=0 Csys=25 Cbath=0 demon_mean=14.27375 cap_fraction=0.0991
+A=2 p_sys=0.00845 hits=169 p_full=0 Wsys=-0.0517061224 Wbath=0 Csys=100 Cbath=0 demon_mean=14.05755 cap_fraction=0.0941
+A=4 p_sys=0.00735 hits=147 p_full=0 Wsys=-0.20964898 Wbath=0 Csys=400 Cbath=0 demon_mean=13.9156 cap_fraction=0.09545
+A=8 p_sys=0.00975 hits=195 p_full=0 Wsys=-0.607608163 Wbath=0 Csys=1600 Cbath=0 demon_mean=13.87315 cap_fraction=0.0929
+A=12 p_sys=0.0097 hits=194 p_full=0 Wsys=-1.11242449 Wbath=0 Csys=3600 Cbath=0 demon_mean=13.7923 cap_fraction=0.0923
+MODE SYSTEM_PLUS_BATH
+A=0 p_sys=0.00635 hits=127 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=14.8276 cap_fraction=0.1901
+A=0.5 p_sys=0.006 hits=120 p_full=0 Wsys=-0.00454897959 Wbath=-0.0160489796 Csys=6.25 Cbath=100 demon_mean=14.1387 cap_fraction=0.09475
+A=1 p_sys=0.007 hits=140 p_full=0 Wsys=-0.00688571429 Wbath=-0.0473877551 Csys=25 Cbath=400 demon_mean=13.8893 cap_fraction=0.0948
+A=2 p_sys=0.00625 hits=125 p_full=0 Wsys=-0.00947755102 Wbath=-0.149828571 Csys=100 Cbath=1600 demon_mean=13.7408 cap_fraction=0.096
+A=4 p_sys=0.00795 hits=159 p_full=0 Wsys=-0.106057143 Wbath=-0.353142857 Csys=400 Cbath=6400 demon_mean=13.4894 cap_fraction=0.0859
+A=8 p_sys=0.00735 hits=147 p_full=0 Wsys=-0.350073469 Wbath=-0.793665306 Csys=1600 Cbath=25600 demon_mean=13.5405 cap_fraction=0.09255
+A=12 p_sys=0.0086 hits=172 p_full=0 Wsys=-0.470595918 Wbath=-1.44862041 Csys=3600 Cbath=57600 demon_mean=13.3363 cap_fraction=0.08605
+
+BATH 32 N 40 X0 1010101011001011001001000111111000011000
+MODE SYSTEM_ONLY
+A=0 p_sys=0.00185 hits=37 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=10.4544 cap_fraction=0.0634
+A=0.5 p_sys=0.0018 hits=36 p_full=0 Wsys=0.00178367347 Wbath=0 Csys=6.25 Cbath=0 demon_mean=10.47995 cap_fraction=0.03275
+A=1 p_sys=0.00205 hits=41 p_full=0 Wsys=0.0131591837 Wbath=0 Csys=25 Cbath=0 demon_mean=10.5022 cap_fraction=0.0327
+A=2 p_sys=0.0022 hits=44 p_full=0 Wsys=0.0362612245 Wbath=0 Csys=100 Cbath=0 demon_mean=10.46965 cap_fraction=0.03695
+A=4 p_sys=0.0019 hits=38 p_full=0 Wsys=0.0698612245 Wbath=0 Csys=400 Cbath=0 demon_mean=10.4261 cap_fraction=0.03485
+A=8 p_sys=0.0023 hits=46 p_full=0 Wsys=0.132930612 Wbath=0 Csys=1600 Cbath=0 demon_mean=10.4394 cap_fraction=0.0384
+A=12 p_sys=0.00285 hits=57 p_full=0 Wsys=0.0947265306 Wbath=0 Csys=3600 Cbath=0 demon_mean=10.4338 cap_fraction=0.0391
+MODE SYSTEM_PLUS_BATH
+A=0 p_sys=0.00165 hits=33 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=10.5242 cap_fraction=0.0603
+A=0.5 p_sys=0.00195 hits=39 p_full=0 Wsys=0.00659387755 Wbath=0.00335714286 Csys=6.25 Cbath=200 demon_mean=10.37075 cap_fraction=0.0348
+A=1 p_sys=0.0021 hits=42 p_full=0 Wsys=0.000359183673 Wbath=-0.0097877551 Csys=25 Cbath=800 demon_mean=10.26995 cap_fraction=0.03635
+A=2 p_sys=0.00215 hits=43 p_full=0 Wsys=0.0045877551 Wbath=-0.0374204082 Csys=100 Cbath=3200 demon_mean=10.3236 cap_fraction=0.0411
+A=4 p_sys=0.003 hits=60 p_full=0 Wsys=0.027755102 Wbath=-0.0795428571 Csys=400 Cbath=12800 demon_mean=10.36975 cap_fraction=0.04255
+A=8 p_sys=0.00255 hits=51 p_full=0 Wsys=-0.0113306122 Wbath=-0.131689796 Csys=1600 Cbath=51200 demon_mean=10.3755 cap_fraction=0.04
+A=12 p_sys=0.0034 hits=68 p_full=0 Wsys=-0.0288979592 Wbath=-0.17402449 Csys=3600 Cbath=115200 demon_mean=10.31365 cap_fraction=0.042
+
+BATH 64 N 72 X0 101010101100101100100100011111100001100000001111011010001001011110100111
+MODE SYSTEM_ONLY
+A=0 p_sys=0.00135 hits=27 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=8.955 cap_fraction=0.0476
+A=0.5 p_sys=0.0012 hits=24 p_full=0 Wsys=0.00656122449 Wbath=0 Csys=6.25 Cbath=0 demon_mean=8.99985 cap_fraction=0.02495
+A=1 p_sys=0.00125 hits=25 p_full=0 Wsys=0.0152244898 Wbath=0 Csys=25 Cbath=0 demon_mean=9.0536 cap_fraction=0.0224
+A=2 p_sys=0.0016 hits=32 p_full=0 Wsys=0.0893795918 Wbath=0 Csys=100 Cbath=0 demon_mean=9.1485 cap_fraction=0.0273
+A=4 p_sys=0.00155 hits=31 p_full=0 Wsys=0.165485714 Wbath=0 Csys=400 Cbath=0 demon_mean=9.12595 cap_fraction=0.02595
+A=8 p_sys=0.0023 hits=46 p_full=0 Wsys=0.306253061 Wbath=0 Csys=1600 Cbath=0 demon_mean=9.1405 cap_fraction=0.02785
+A=12 p_sys=0.0017 hits=34 p_full=0 Wsys=0.511640816 Wbath=0 Csys=3600 Cbath=0 demon_mean=9.2147 cap_fraction=0.0303
+MODE SYSTEM_PLUS_BATH
+A=0 p_sys=0.0013 hits=26 p_full=0 Wsys=0 Wbath=0 Csys=0 Cbath=0 demon_mean=8.9607 cap_fraction=0.0469
+A=0.5 p_sys=0.0016 hits=32 p_full=0 Wsys=0.0087244898 Wbath=0.0165938776 Csys=6.25 Cbath=400 demon_mean=9.1649 cap_fraction=0.02865
+A=1 p_sys=0.00165 hits=33 p_full=0 Wsys=0.0153020408 Wbath=0.0229714286 Csys=25 Cbath=1600 demon_mean=9.2408 cap_fraction=0.02985
+A=2 p_sys=0.00155 hits=31 p_full=0 Wsys=0.015844898 Wbath=0.0432571429 Csys=100 Cbath=6400 demon_mean=9.3237 cap_fraction=0.0305
+A=4 p_sys=0.00205 hits=41 p_full=0 Wsys=0.0639510204 Wbath=0.188212245 Csys=400 Cbath=25600 demon_mean=9.32885 cap_fraction=0.0332
+A=8 p_sys=0.00175 hits=35 p_full=0 Wsys=0.0323591837 Wbath=0.609502041 Csys=1600 Cbath=102400 demon_mean=9.36835 cap_fraction=0.0345
+A=12 p_sys=0.0025 hits=50 p_full=0 Wsys=0.15364898 Wbath=0.65995102 Csys=3600 Cbath=230400 demon_mean=9.37615 cap_fraction=0.03425

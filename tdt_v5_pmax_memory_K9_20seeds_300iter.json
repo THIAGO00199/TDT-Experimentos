@@ -1,0 +1,43 @@
+{
+  "model": "two qubits + two explicit truncated N=3 oscillator modes; closed unitary dynamics",
+  "protocol": {
+    "K": 9,
+    "T": 18.0,
+    "NT": 180,
+    "dt": 0.1,
+    "control_bound": 1.5,
+    "control_channels": "local X/Y on each qubit",
+    "seeds": 20,
+    "iterations_per_seed": 300,
+    "initial_candidates_per_seed": 6,
+    "seed_base": 20261115,
+    "objective": "maximize final reduced two-qubit purity directly"
+  },
+  "hamiltonian_parameters": {
+    "wq": [
+      1.0,
+      1.08
+    ],
+    "wa": [
+      0.82,
+      1.18
+    ],
+    "g": [
+      0.32,
+      0.32
+    ],
+    "Jzz": 0.025,
+    "mode_cutoff": 3,
+    "hilbert_dimension": 36
+  },
+  "seeds": [
+    {
+      "seed": 0,
+      "W_ctrl": 0.02493477300609439,
+      "Q_explicit_bath": 0.0,
+      "delta_E_total": 0.024934773006103583,
+      "purity": 0.9750063350303855,
+      "entropy_nats": 0.07641796280683211,
+      "rho_qubits_final": [
+        [
+          

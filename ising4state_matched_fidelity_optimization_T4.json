@@ -1,0 +1,84 @@
+{
+  "linear": {
+    "ref": {
+      "fidelity": 0.39894174164380014,
+      "mean_actuator_work": -40.16563244208484,
+      "dissipated_work": 7.6731086224350475,
+      "delta_nonequilibrium_free_energy": -47.838741064519894,
+      "amplitude": 12.0,
+      "target_fidelity": 0.45,
+      "target_reached": false,
+      "scan_max_fidelity": 0.39894174164380014,
+      "scan_max_amplitude": 12.0
+    },
+    "obs": {
+      "fidelity": 0.44999998768442007,
+      "mean_actuator_work": -3.5840149153870535,
+      "dissipated_work": 0.8411126848061041,
+      "delta_nonequilibrium_free_energy": -4.425127600193159,
+      "amplitude": 1.9759583711327604,
+      "target_fidelity": 0.45,
+      "target_reached": true,
+      "scan_max_fidelity": 0.9540095077154667,
+      "scan_max_amplitude": 12.0
+    },
+    "comparison": {
+      "fidelity_gap": -0.051058246040619926,
+      "dissipation_saving_before_memory": 6.831995937628943,
+      "net_after_conditional_Landauer_bound": 1.6084511459437731,
+      "net_after_dynamic_reset_tau1000": 1.4675632483497916,
+      "net_after_dynamic_reset_plus_MT_reset": -2.5445885500782897
+    }
+  },
+  "ramp_hold": {
+    "ref": {
+      "fidelity": 0.40176458982634616,
+      "mean_actuator_work": -37.39995260592348,
+      "dissipated_work": 10.604620057436653,
+      "delta_nonequilibrium_free_energy": -48.004572663360136,
+      "amplitude": 12.0,
+      "target_fidelity": 0.45,
+      "target_reached": false,
+      "scan_max_fidelity": 0.40176458982634616,
+      "scan_max_amplitude": 12.0
+    },
+    "obs": {
+      "fidelity": 0.4500001825510561,
+      "mean_actuator_work": -2.788987590934142,
+      "dissipated_work": 0.5880761141849304,
+      "delta_nonequilibrium_free_energy": -3.377063705119072,
+      "amplitude": 1.531118174627753,
+      "target_fidelity": 0.45,
+      "target_reached": true,
+      "scan_max_fidelity": 0.9743932272112815,
+      "scan_max_amplitude": 12.0
+    },
+    "comparison": {
+      "fidelity_gap": -0.04823559272470995,
+      "dissipation_saving_before_memory": 10.016543943251722,
+      "net_after_conditional_Landauer_bound": 4.792999151566552,
+      "net_after_dynamic_reset_tau1000": 4.652111253972571,
+      "net_after_dynamic_reset_plus_MT_reset": 0.6399594555444894
+    }
+  },
+  "memory": {
+    "H_X0_given_MT_bits": 3.0143928667302275,
+    "H_MT_bits": 2.3153246011543716,
+    "conditional_Landauer_bound": 5.22354479168517,
+    "MT_reset_Landauer_bound_if_closed": 4.012151798428081,
+    "dynamic_conditional_register_reset_tau1000": 5.364432689279152,
+    "dynamic_reset_includes_landscape_preparation": true,
+    "write_read_detector_and_barrier_costs": "not modeled; memory total is therefore a lower bound/incomplete ledger"
+  },
+  "method": {
+    "model": "exact deterministic master equation for 4-spin periodic Ising ring; 16 states; Gibbs prior; Glauber rates; 20-step piecewise-constant local-field protocol",
+    "control_families": [
+      "linear ramp h_i=A*s_i(target)*t/T",
+      "ramp-hold h_i=A*s_i(target)*min(2t/T,1)"
+    ],
+    "objective": "minimum dissipated work within one-parameter amplitude family subject to exact reconstruction fidelity=45%; root solved by brentq after grid scan",
+    "dissipation": "W_actuator - [F_noneq(final,H_final)-F_noneq(initial,H_initial)] with target-conditioned ensemble; target register treated as retained external label",
+    "important": "Deterministic ensemble calculation; no Monte Carlo confidence intervals. This is not a global optimum over arbitrary waveforms. The 45% condition is checked on exact master-equation probabilities."
+  },
+  "runtime_seconds": 19.758132219314575
+}

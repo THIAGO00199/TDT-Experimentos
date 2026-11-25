@@ -1,0 +1,76 @@
+TDT v2 / two-level exact master-equation benchmark
+All energies are in kBT units (kBT=1). No Monte Carlo was used.
+Model: beta=1.0, gamma=1.0, lambda A=-4.0, lambda B=4.0, NSEG=32, dt=0.25, endpoint hold=20.0
+Exact free-energy difference A->B: 4
+
+PATH forward_opt
+  work=4.70319397964783
+  deltaF=4
+  dissipation=0.703193979647832
+  sigma=0.703193979647832
+  T_sigma=0.703193979647832
+  p_final=0.0179862101235633
+  p_eq_final=0.0179862099620916
+  final_probability_error=1.61471707532668e-10
+  deltaF_neq=4
+  dissipation_neq=0.703193979647832
+  first_law_entropy_balance_residual=3.33066907387547e-16
+  TDT operational Pi (reference in kBT):
+    ref=0.1: Pi=3.87186620205, total_variation_work=4.70319397965
+    ref=1.0: Pi=1.74102636521, total_variation_work=4.70319397965
+    ref=10.0: Pi=0.385479654716, total_variation_work=4.70319397965
+
+PATH reverse_time_reversed
+  work=-3.14988194825293
+  deltaF=-4
+  dissipation=0.850118051747068
+  sigma=0.850118051747069
+  T_sigma=0.850118051747069
+  p_final=0.982013789692453
+  p_eq_final=0.982013790037908
+  final_probability_error=-3.45455553052432e-10
+  deltaF_neq=-4
+  dissipation_neq=0.850118051747068
+  first_law_entropy_balance_residual=-6.66133814775094e-16
+  TDT operational Pi (reference in kBT):
+    ref=0.1: Pi=3.48120376506, total_variation_work=3.14988194825
+    ref=1.0: Pi=1.42307988763, total_variation_work=3.14988194825
+    ref=10.0: Pi=0.27382768827, total_variation_work=3.14988194825
+
+PATH reverse_independently_optimized
+  work=-3.2968060202816
+  deltaF=-4
+  dissipation=0.703193979718402
+  sigma=0.703193979718406
+  T_sigma=0.703193979718406
+  p_final=0.982013789876436
+  p_eq_final=0.982013790037908
+  final_probability_error=-1.6147250203602e-10
+  deltaF_neq=-4
+  dissipation_neq=0.703193979718402
+  first_law_entropy_balance_residual=-3.77475828372553e-15
+  TDT operational Pi (reference in kBT):
+    ref=0.1: Pi=3.5254206773, total_variation_work=3.29680602028
+    ref=1.0: Pi=1.45787196072, total_variation_work=3.29680602028
+    ref=10.0: Pi=0.284938764542, total_variation_work=3.29680602028
+
+OPTIMIZER diagnostics
+  forward={"success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 121, "fun": 4.70319397964783, "multi_start": [{"start": 0, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 118, "fun": 4.703193979753555}, {"start": 1, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 121, "fun": 4.70319397964783}, {"start": 2, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 110, "fun": 4.703193979769224}, {"start": 3, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 127, "fun": 4.703193979972869}]}
+  reverse={"success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 136, "fun": -3.296806020281597, "multi_start": [{"start": 0, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 116, "fun": -3.296806020228649}, {"start": 1, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 140, "fun": -3.2968060202566125}, {"start": 2, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 103, "fun": -3.2968060202473604}, {"start": 3, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH", "nit": 136, "fun": -3.296806020281597}]}
+
+FORWARD Pi compared with independently optimized recovery dissipation
+  W_ref=0.1 kBT: Pi=3.87186620205, recovery W-DeltaF=0.703193979718, difference=3.16867222233
+  W_ref=1.0 kBT: Pi=1.74102636521, recovery W-DeltaF=0.703193979718, difference=1.03783238549
+  W_ref=10.0 kBT: Pi=0.385479654716, recovery W-DeltaF=0.703193979718, difference=-0.317714325002
+
+FIRST 10 FORWARD CONTROL POINTS
+  {"jump": 1, "lambda": -2.0390344250238233, "p_before": 0.9820137900379085, "delta_work": 1.9256952364162216, "cumulative_signed_work": 1.9256952364162216, "cumulative_abs_work": 1.9256952364162216}
+  {"jump": 2, "lambda": -1.754399182029974, "p_before": 0.9605178979601542, "delta_work": 0.27339724528582976, "cumulative_signed_work": 2.1990924817020514, "cumulative_abs_work": 2.1990924817020514}
+  {"jump": 3, "lambda": -1.5123017997158152, "p_before": 0.9366259296016494, "delta_work": 0.22675468576412489, "cumulative_signed_work": 2.425847167466176, "cumulative_abs_work": 2.425847167466176}
+  {"jump": 4, "lambda": -1.2985889172461036, "p_before": 0.9106961065163002, "delta_work": 0.19462748997754206, "cumulative_signed_work": 2.6204746574437183, "cumulative_abs_work": 2.6204746574437183}
+  {"jump": 5, "lambda": -1.105119691851589, "p_before": 0.8830243715563301, "delta_work": 0.17083804116948115, "cumulative_signed_work": 2.7913126986131993, "cumulative_abs_work": 2.7913126986131993}
+  {"jump": 6, "lambda": -0.9267644148483236, "p_before": 0.8538689390144578, "delta_work": 0.15229203114240802, "cumulative_signed_work": 2.943604729755607, "cumulative_abs_work": 2.943604729755607}
+  {"jump": 7, "lambda": -0.7599926895934015, "p_before": 0.8234649862251942, "delta_work": 0.1373306764397963, "cumulative_signed_work": 3.0809354061954033, "cumulative_abs_work": 3.0809354061954033}
+  {"jump": 8, "lambda": -0.6022628283128895, "p_before": 0.7920297373887002, "delta_work": 0.12492674060836005, "cumulative_signed_work": 3.205862146803763, "cumulative_abs_work": 3.2058621468037636}
+  {"jump": 9, "lambda": -0.45166904270172337, "p_before": 0.7597665259708762, "delta_work": 0.1144161173265986, "cumulative_signed_work": 3.3202782641303616, "cumulative_abs_work": 3.320278264130362}
+  {"jump": 10, "lambda": -0.3067245518356181, "p_before": 0.7268674479798973, "delta_work": 0.10535543217459148, "cumulative_signed_work": 3.425633696304953, "cumulative_abs_work": 3.4256336963049536}

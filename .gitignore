@@ -1,0 +1,19 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+# Local compiled experiment binaries
+/demon_creutz_banho8
+/demon_creutz_banho8_crosscontrols
+/tdt_v4_creutz_schnakenberg
+/tdt_v4_creutz_thermo
+/tdt_v4_hamming_baseline
+/tdt_v4_spsa_hamming
+/tdt_v4_spsa_40param

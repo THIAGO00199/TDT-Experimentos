@@ -1,0 +1,9 @@
+{
+  "parameters": {"beta":0.4,"kT":2.5,"nu":1,"B":20,"epsilon_final":15,"N_per_protocol":200000,"tau_relax_initial":1490.47899352},
+  "results":[
+    {"protocol":"FAST_eta_0.01","N":200000,"tau":14.9047899352,"mean_work":7.14467798079,"mean_work_SE":0.0161576771867,"work_std":7.22591484474,"jarzynski_estimate":0.500845149473,"jarzynski_SE_naive":0.00111128138741,"jarzynski_target":0.501239376088,"jarzynski_z_naive":-0.354749589126,"relative_error_percent":-0.078650368346,"weight_ESS":100774.923995,"weight_ESS_fraction":0.503874619976,"final_p1":0.35991,"work_min":0,"work_max":15,"runtime_s":0.023960847},
+    {"protocol":"SLOW_eta_1000","N":200000,"tau":1490478.99352,"mean_work":1.73029041854,"mean_work_SE":0.000306301971595,"work_std":0.136982063569,"jarzynski_estimate":0.501266941927,"jarzynski_SE_naive":6.13714221392e-05,"jarzynski_target":0.501239376088,"jarzynski_z_naive":0.449164086904,"relative_error_percent":0.00549953577117,"weight_ESS":199402.205346,"weight_ESS_fraction":0.997011026728,"final_p1":0.00234,"work_min":1.11095461143,"work_max":2.36952213137,"runtime_s":7.832552984}
+  ],
+  "DeltaF":1.72667873856,
+  "Jarzynski_target":0.501239376088
+}

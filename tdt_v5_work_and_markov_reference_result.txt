@@ -1,0 +1,70 @@
+{
+  "nonmarkovian": {
+    "NT": 180,
+    "dt": 0.1,
+    "target_purity": 0.9354285942312619,
+    "entropy_nats": 0.17169516411336855,
+    "concurrence_not_recomputed": null,
+    "W_pre_quench": -0.002956044894862754,
+    "delta_E_total": -0.0029560448948564577,
+    "residual": -6.296178856057821e-15,
+    "refinements_fixed_protocol": [
+      {
+        "NT": 360,
+        "dt": 0.05,
+        "W": -0.0026453106046703577,
+        "delta_E": -0.0026453106046433472,
+        "residual": -2.7010511882696875e-14,
+        "purity": 0.935903777126297,
+        "entropy": 0.17052248883390808
+      },
+      {
+        "NT": 720,
+        "dt": 0.025,
+        "W": -0.00249716825805319,
+        "delta_E": -0.0024971682579799648,
+        "residual": -7.322528000619499e-14,
+        "purity": 0.9361350376650018,
+        "entropy": 0.1699472233738199
+      }
+    ],
+    "backflow_Pi_BLP_pair": 0.29866391709485096,
+    "SPSA_iterations": 120,
+    "control_coefficients": [
+      -0.15718372897911356,
+      -0.4273445187534677,
+      -0.05416550968543576,
+      -0.19277290150636608,
+      -0.2963599357708432,
+      0.04647944370401533,
+      0.07330475992072974,
+      0.05412032813152012,
+      0.18789244037656525,
+      0.38882836368537016,
+      -0.3869392521225412,
+      -0.43814228738546235,
+      -0.11476754555498929,
+      0.707669464260031,
+      -0.04033739651534048,
+      -0.6207236226591311,
+      -0.22348613284375016,
+      -0.8782622711070545,
+      -0.34864933718949154,
+      0.043281265338111934
+    ]
+  },
+  "markovian_reference": {
+    "bath": "zero-temperature amplitude damping, two local sigma_- jumps",
+    "gamma_calibrated_to_match_uncontrolled_nonmarkovian_final_purity": 0.9999999999999996,
+    "uncontrolled_purity_at_T": 0.8447720591976408,
+    "target_purity": 0.9354285942312619,
+    "method": "SPSA 60 iterations; same 4 local X/Y channels and 5 temporal knots; objective signed quench work + penalty for missing target",
+    "work_quench_estimate": -2.356417975327475,
+    "achieved_purity": 0.9292212929056386,
+    "objective": -2.3486190401605236
+  },
+  "comparison": {
+    "delta_W_TDT_candidate": 2.3534619304326125,
+    "warning": "This is not yet a valid TDT signature: Lindblad and explicit-mode models differ physically; gamma calibration matches only one endpoint purity; SPSA is not a certified global minimum; the signed drive work can be negative and excludes actuator overhead."
+  }
+}

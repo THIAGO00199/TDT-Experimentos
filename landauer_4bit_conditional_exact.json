@@ -1,0 +1,57 @@
+{
+  "model": "4-spin periodic Ising ring; X0 is 4-bit microstate; M_T is final total magnetization",
+  "parameters": {
+    "n_bits": 4,
+    "states": 16,
+    "beta": 0.4,
+    "kT": 2.5,
+    "J": 1.0,
+    "h": 0.0,
+    "gamma": 1.0,
+    "observation_time": 1.0
+  },
+  "checks": {
+    "max_transition_row_sum_error": 1.5543122344752192e-15,
+    "minimum_transition_probability": 0.003034172787947023,
+    "max_detailed_balance_absolute_residual": 1.734723475976807e-18
+  },
+  "entropies_bits": {
+    "H_X0": 3.4964472312260817,
+    "H_M_T": 2.315324601154372,
+    "H_X0_given_M_T": 3.014392866730227,
+    "H_X0_given_M_T_direct": 3.014392866730228,
+    "I_X0_M_T": 0.4820543644958546,
+    "H_joint_X0_M_T": 5.329717467884599
+  },
+  "ideal_landauer_energy_units": {
+    "W_erase_without_side_information": 6.058881350752464,
+    "W_erase_with_M_T": 5.223544791685169,
+    "maximum_saving": 0.8353365590672945,
+    "kTln2_times_H_cond": 5.223544791685169,
+    "erase_M_T_separately": 4.012151798428082,
+    "conditional_erase_plus_M_reset": 9.235696590113252,
+    "net_saving_after_M_reset": -3.1768152393607876
+  },
+  "identity_checks": {
+    "saving_equals_kTln2_mutual_information": 0.8353365590672945,
+    "difference_of_erase_bounds": 0.8353365590672945,
+    "net_cost_identity": 9.235696590113252,
+    "H_X0_equals_H_cond_plus_mutual_information": 0.0
+  },
+  "distributions": {
+    "M_T_values": [
+      -4,
+      -2,
+      0,
+      2,
+      4
+    ],
+    "P_M_T": [
+      0.22201093570274258,
+      0.17929293950047626,
+      0.1973922495935625,
+      0.1792929395004762,
+      0.22201093570274258
+    ]
+  }
+}

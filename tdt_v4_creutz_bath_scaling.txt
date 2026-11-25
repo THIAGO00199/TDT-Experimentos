@@ -1,0 +1,66 @@
+Creutz size scaling; Nsystem=8; bath=8,16,32,64; H=12; control sweeps=50; trajectories=100000
+Creutz demon explicitly included in conserved energy; ring bonds J=2 within system, J=1 elsewhere incl interfaces.
+
+BATH=8 N=16 E_spin0=11 E_total0=11 X0=1011010010101001
+CONTROL=SYSTEM_8
+t=0 exact=362/100000 p=0.00362 KL95lower_zero=-1 W=0 SE=0 demon=5.03152 overlap=11.9879 acc_relax=0 acc_ctrl=398.4302
+t=1 exact=9/100000 p=9e-05 KL95lower_zero=-1 W=18.5676 SE=0.07993822054 demon=29.55922 overlap=9.29278 acc_relax=15.66935 acc_ctrl=665.86135
+t=2 exact=6/100000 p=6e-05 KL95lower_zero=-1 W=23.47392 SE=0.08944112923 demon=34.57004 overlap=9.04813 acc_relax=31.43799 acc_ctrl=691.59132
+t=5 exact=6/100000 p=6e-05 KL95lower_zero=-1 W=24.22368 SE=0.09037244974 demon=35.37164 overlap=8.99632 acc_relax=78.73582 acc_ctrl=695.68858
+t=10 exact=11/100000 p=0.00011 KL95lower_zero=-1 W=24.03792 SE=0.08990931443 demon=35.19228 overlap=9.00866 acc_relax=157.54763 acc_ctrl=695.06947
+t=20 exact=12/100000 p=0.00012 KL95lower_zero=-1 W=24.19104 SE=0.09041652856 demon=35.31502 overlap=9.00466 acc_relax=315.21396 acc_ctrl=695.63984
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 KL95lower_zero=-1 W=0 SE=0 demon=0 overlap=16 acc_relax=0 acc_ctrl=0
+t=1 exact=29/100000 p=0.00029 KL95lower_zero=-1 W=26.62464 SE=0.104206452 demon=37.3301 overlap=10.1066 acc_relax=15.672 acc_ctrl=588.82234
+t=2 exact=13/100000 p=0.00013 KL95lower_zero=-1 W=35.33184 SE=0.1217324132 demon=46.32434 overlap=9.58731 acc_relax=31.43455 acc_ctrl=640.27712
+t=5 exact=13/100000 p=0.00013 KL95lower_zero=-1 W=36.77376 SE=0.1247663166 demon=47.8016 overlap=9.5301 acc_relax=78.72958 acc_ctrl=646.74152
+t=10 exact=9/100000 p=9e-05 KL95lower_zero=-1 W=36.71832 SE=0.124440965 demon=47.74586 overlap=9.5295 acc_relax=157.56383 acc_ctrl=646.81489
+t=20 exact=6/100000 p=6e-05 KL95lower_zero=-1 W=36.5928 SE=0.124388782 demon=47.58436 overlap=9.53131 acc_relax=315.19485 acc_ctrl=646.39346
+
+BATH=16 N=24 E_spin0=1 E_total0=1 X0=111101011101100111011001
+CONTROL=SYSTEM_8
+t=0 exact=6/100000 p=6e-05 KL95lower_zero=-1 W=-0.0024 SE=0.0007589086902 demon=1.78896 overlap=16.18542 acc_relax=0 acc_ctrl=669.09058
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=18.74232 SE=0.07109423612 demon=21.5171 overlap=13.69629 acc_relax=20.80542 acc_ctrl=996.16317
+t=2 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=25.09824 SE=0.08263900949 demon=27.55928 overlap=13.29386 acc_relax=41.83446 acc_ctrl=1043.8205
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=27.50712 SE=0.08653908882 demon=29.79914 overlap=13.15448 acc_relax=104.95407 acc_ctrl=1058.92911
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=27.49536 SE=0.08675092037 demon=29.82292 overlap=13.14968 acc_relax=210.10823 acc_ctrl=1058.40521
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=27.55872 SE=0.08695664161 demon=29.86892 overlap=13.17074 acc_relax=420.48755 acc_ctrl=1058.29099
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 KL95lower_zero=-1 W=0 SE=0 demon=0 overlap=24 acc_relax=0 acc_ctrl=0
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=31.98072 SE=0.1090501952 demon=34.3561 overlap=15.51465 acc_relax=20.80662 acc_ctrl=848.57779
+t=2 exact=1/100000 p=1e-05 KL95lower_zero=-1 W=46.23456 SE=0.1391732856 demon=48.14004 overlap=14.37632 acc_relax=41.83594 acc_ctrl=961.82508
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=50.39208 SE=0.146256242 demon=52.2432 overlap=14.11493 acc_relax=104.96192 acc_ctrl=987.28861
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=50.43744 SE=0.1462969913 demon=52.33288 overlap=14.10527 acc_relax=210.07175 acc_ctrl=987.77992
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=50.61744 SE=0.1467714484 demon=52.43086 overlap=14.11283 acc_relax=420.44329 acc_ctrl=987.76784
+
+BATH=32 N=40 E_spin0=9 E_total0=9 X0=0011011011011111000101001101010001010011
+CONTROL=SYSTEM_8
+t=0 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=-3.03936 SE=0.02524023193 demon=6.85292 overlap=23.81461 acc_relax=0 acc_ctrl=1515.40439
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=18.10704 SE=0.08014095972 demon=28.1833 overlap=21.35521 acc_relax=38.35136 acc_ctrl=1830.30567
+t=2 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=23.45976 SE=0.08988387067 demon=33.41822 overlap=21.08344 acc_relax=77.13683 acc_ctrl=1865.50313
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=24.57552 SE=0.09134278169 demon=34.44026 overlap=21.01387 acc_relax=193.51726 acc_ctrl=1870.99027
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=24.55512 SE=0.09116446686 demon=34.49118 overlap=21.01725 acc_relax=387.48426 acc_ctrl=1871.22287
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=24.56712 SE=0.09141296051 demon=34.41384 overlap=21.01256 acc_relax=775.33279 acc_ctrl=1871.30203
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 KL95lower_zero=-1 W=0 SE=0 demon=0 overlap=40 acc_relax=0 acc_ctrl=0
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=37.94664 SE=0.1412672939 demon=47.40028 overlap=24.40983 acc_relax=38.35616 acc_ctrl=1558.38591
+t=2 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=58.39968 SE=0.1851334204 demon=67.84624 overlap=22.80979 acc_relax=77.15357 acc_ctrl=1718.19456
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=62.16912 SE=0.1924729892 demon=71.55408 overlap=22.5954 acc_relax=193.5352 acc_ctrl=1738.92812
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=61.90752 SE=0.1916249777 demon=71.30452 overlap=22.58627 acc_relax=387.47541 acc_ctrl=1739.289
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=62.11584 SE=0.1927319221 demon=71.51518 overlap=22.59932 acc_relax=775.37102 acc_ctrl=1738.85988
+
+BATH=64 N=72 E_spin0=23 E_total0=23 X0=101110100010101011110101011101010110001100011000100101110101001011010011
+CONTROL=SYSTEM_8
+t=0 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=-19.452 SE=0.03631936343 demon=7.75994 overlap=39.24607 acc_relax=0 acc_ctrl=3007.18959
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=10.11192 SE=0.09562399458 demon=34.89914 overlap=36.9612 acc_relax=71.27696 acc_ctrl=3433.02216
+t=2 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=16.2996 SE=0.1032330722 demon=40.85342 overlap=36.75629 acc_relax=143.12768 acc_ctrl=3468.86691
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=17.50368 SE=0.1042167312 demon=42.0018 overlap=36.72523 acc_relax=358.69839 acc_ctrl=3474.4539
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=17.66472 SE=0.1049908752 demon=42.11092 overlap=36.72805 acc_relax=717.98737 acc_ctrl=3474.82572
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=17.25 SE=0.1042249135 demon=41.73776 overlap=36.71382 acc_relax=1436.54273 acc_ctrl=3474.34247
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 KL95lower_zero=-1 W=0 SE=0 demon=0 overlap=72 acc_relax=0 acc_ctrl=0
+t=1 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=36.39192 SE=0.1820743408 demon=60.2013 overlap=42.36461 acc_relax=71.2827 acc_ctrl=2962.82891
+t=2 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=71.02104 SE=0.2559861441 demon=94.66478 overlap=39.5895 acc_relax=143.12675 acc_ctrl=3239.77253
+t=5 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=77.6796 SE=0.2671803358 demon=101.33208 overlap=39.22912 acc_relax=358.70303 acc_ctrl=3275.10163
+t=10 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=77.25504 SE=0.2669078027 demon=100.86966 overlap=39.22581 acc_relax=717.99317 acc_ctrl=3274.24232
+t=20 exact=0/100000 p=0 KL95lower_zero=10.41431318 W=77.628 SE=0.2670483974 demon=101.25272 overlap=39.24298 acc_relax=1436.5535 acc_ctrl=3274.14148

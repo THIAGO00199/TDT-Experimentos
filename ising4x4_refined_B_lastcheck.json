@@ -1,0 +1,16 @@
+{
+  "Tobs": 4.0,
+  "H": 7.43261530224826,
+  "family": "linear",
+  "policy": "no_info",
+  "amplitude": 3.5,
+  "k_success": 4140,
+  "n": 20000,
+  "fidelity": 0.207,
+  "fidelity_ci95_wilson": [
+    0.2014414578791935,
+    0.21267107524968376
+  ],
+  "mean_work": -45.07447,
+  "work_se": 0.09115976828416514
+}

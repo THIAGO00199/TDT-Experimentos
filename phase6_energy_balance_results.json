@@ -1,0 +1,79 @@
+{
+  "config": {
+    "NX": 32,
+    "NT": 80,
+    "T": 0.8,
+    "dt": 0.01,
+    "nu": 0.05,
+    "tau": 0.25,
+    "quadrature": "RK4 stage quadrature of instantaneous work integral(f*u) and dissipation integral(q^2/nu), matching the RK4 state integrator",
+    "spatial_integral": "periodic Fourier grid, dx=2pi/NX",
+    "model": "u_t + u*u_x = q_x + f; q_t=(nu*u_x-q)/tau",
+    "energy": "H=1/2 integral(u^2) dx + tau/(2nu) integral(q^2) dx",
+    "residual": "R_E=W-delta_H-D",
+    "caveat": "finite dt and projected Fourier dynamics; residual includes time-integration and roundoff error; controls are finite-dimensional and local-optimization outputs"
+  },
+  "cases": [
+    {
+      "case": "original_F2_rate10_lambda100",
+      "H_initial": 1.4935992591496519,
+      "H_final": 0.17946261664728969,
+      "delta_H": -1.3141366425023622,
+      "W_work": -1.2070670759102993,
+      "D_dissipation": 0.10706956800296202,
+      "R_E": -1.4108991197581133e-09,
+      "relative_residual": -1.0736319756456202e-09,
+      "endpoint_u_rms_vs_target": 0.478975068838475,
+      "endpoint_q_rms_vs_target": 0.010765599813732681
+    },
+    {
+      "case": "expanded_F10_rate50_lambda_10",
+      "H_initial": 1.4935992591496519,
+      "H_final": 1.57080881284853,
+      "delta_H": 0.07720955369887816,
+      "W_work": 0.15522817411655365,
+      "D_dissipation": 0.07801863783341195,
+      "R_E": -1.7415736464077014e-08,
+      "relative_residual": -1.121944296722858e-07,
+      "endpoint_u_rms_vs_target": 9.50457411414863e-05,
+      "endpoint_q_rms_vs_target": 4.462490327432829e-08
+    },
+    {
+      "case": "expanded_F10_rate50_lambda_30",
+      "H_initial": 1.4935992591496519,
+      "H_final": 1.5708691510514694,
+      "delta_H": 0.07726989190181754,
+      "W_work": 0.155288385582672,
+      "D_dissipation": 0.07801851109713713,
+      "R_E": -1.7416282679927342e-08,
+      "relative_residual": -1.1215444487092893e-07,
+      "endpoint_u_rms_vs_target": 9.26735416348689e-05,
+      "endpoint_q_rms_vs_target": 8.180395455151352e-09
+    },
+    {
+      "case": "expanded_F10_rate50_lambda_100",
+      "H_initial": 1.4935992591496519,
+      "H_final": 1.5708691034130047,
+      "delta_H": 0.07726984426335282,
+      "W_work": 0.1552883350601607,
+      "D_dissipation": 0.07801850821308937,
+      "R_E": -1.7416281472559803e-08,
+      "relative_residual": -1.1215447358497668e-07,
+      "endpoint_u_rms_vs_target": 9.269015485283236e-05,
+      "endpoint_q_rms_vs_target": 3.6337054509887448e-09
+    },
+    {
+      "case": "zero_control_baseline",
+      "H_initial": 1.4935992591496519,
+      "H_final": 1.1952280230081285,
+      "delta_H": -0.2983712361415234,
+      "W_work": 0.0,
+      "D_dissipation": 0.2983712363676544,
+      "R_E": -2.2613100281176912e-10,
+      "relative_residual": -7.578847263049494e-10,
+      "endpoint_u_rms_vs_target": 0.38266317604324385,
+      "endpoint_q_rms_vs_target": 0.06823213398236731
+    }
+  ],
+  "elapsed_seconds": 3.472429037094116
+}

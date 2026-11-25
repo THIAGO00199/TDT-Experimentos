@@ -1,0 +1,206 @@
+{
+  "title": "Matched-fidelity amplitude feasibility scan; not a dissipation optimization",
+  "n": 12000,
+  "target_fidelity": 0.45,
+  "amplitudes": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0,
+    8.0,
+    10.0
+  ],
+  "results": [
+    {
+      "amplitude": 0.5,
+      "reference": {
+        "fidelity": 0.27616666666666667,
+        "fidelity_se": 0.004081448261022968,
+        "mean_signed_work": -1.1071708333333332,
+        "work_se": 0.007917709462579085
+      },
+      "with_history": {
+        "fidelity": 0.28691666666666665,
+        "fidelity_se": 0.004129119085385683,
+        "mean_signed_work": -0.8807166666666667,
+        "work_se": 0.008226669441242361
+      }
+    },
+    {
+      "amplitude": 1.0,
+      "reference": {
+        "fidelity": 0.29525,
+        "fidelity_se": 0.004164106922058238,
+        "mean_signed_work": -2.2755833333333335,
+        "work_se": 0.015564483464501995
+      },
+      "with_history": {
+        "fidelity": 0.32125,
+        "fidelity_se": 0.004262710771914979,
+        "mean_signed_work": -1.8358083333333335,
+        "work_se": 0.016382592351663453
+      }
+    },
+    {
+      "amplitude": 1.5,
+      "reference": {
+        "fidelity": 0.3089166666666667,
+        "fidelity_se": 0.004217890070108338,
+        "mean_signed_work": -3.5358374999999995,
+        "work_se": 0.02285352103071729
+      },
+      "with_history": {
+        "fidelity": 0.3550833333333333,
+        "fidelity_se": 0.004368439459370495,
+        "mean_signed_work": -2.8777125000000003,
+        "work_se": 0.024133172281371188
+      }
+    },
+    {
+      "amplitude": 2.0,
+      "reference": {
+        "fidelity": 0.32,
+        "fidelity_se": 0.004258325179379016,
+        "mean_signed_work": -4.816333333333334,
+        "work_se": 0.030094571638786094
+      },
+      "with_history": {
+        "fidelity": 0.3899166666666667,
+        "fidelity_se": 0.004452355740899251,
+        "mean_signed_work": -3.971216666666666,
+        "work_se": 0.03197346619846112
+      }
+    },
+    {
+      "amplitude": 2.5,
+      "reference": {
+        "fidelity": 0.33758333333333335,
+        "fidelity_se": 0.00431683551525197,
+        "mean_signed_work": -6.19375,
+        "work_se": 0.036358484177475704
+      },
+      "with_history": {
+        "fidelity": 0.42875,
+        "fidelity_se": 0.0045177745028203145,
+        "mean_signed_work": -5.1490833333333335,
+        "work_se": 0.039470660703143264
+      }
+    },
+    {
+      "amplitude": 3.0,
+      "reference": {
+        "fidelity": 0.34058333333333335,
+        "fidelity_se": 0.004326144611438004,
+        "mean_signed_work": -7.554449999999999,
+        "work_se": 0.04309749373171828
+      },
+      "with_history": {
+        "fidelity": 0.45225,
+        "fidelity_se": 0.004543492943210103,
+        "mean_signed_work": -6.344125,
+        "work_se": 0.04670432419155032
+      }
+    },
+    {
+      "amplitude": 3.5,
+      "reference": {
+        "fidelity": 0.34191666666666665,
+        "fidelity_se": 0.004330219968644994,
+        "mean_signed_work": -8.947516666666667,
+        "work_se": 0.049367382088674236
+      },
+      "with_history": {
+        "fidelity": 0.4810833333333333,
+        "fidelity_se": 0.004561086856242182,
+        "mean_signed_work": -7.587445833333333,
+        "work_se": 0.05326743684601272
+      }
+    },
+    {
+      "amplitude": 4.0,
+      "reference": {
+        "fidelity": 0.34941666666666665,
+        "fidelity_se": 0.004352438585841105,
+        "mean_signed_work": -10.380866666666668,
+        "work_se": 0.05534122677153092
+      },
+      "with_history": {
+        "fidelity": 0.49575,
+        "fidelity_se": 0.004564189755586417,
+        "mean_signed_work": -8.761166666666666,
+        "work_se": 0.06107879878022051
+      }
+    },
+    {
+      "amplitude": 5.0,
+      "reference": {
+        "fidelity": 0.35783333333333334,
+        "fidelity_se": 0.004375963121501453,
+        "mean_signed_work": -13.268416666666667,
+        "work_se": 0.0673689516365952
+      },
+      "with_history": {
+        "fidelity": 0.5359166666666667,
+        "fidelity_se": 0.004552563316927029,
+        "mean_signed_work": -11.382875,
+        "work_se": 0.07447849686740533
+      }
+    },
+    {
+      "amplitude": 6.0,
+      "reference": {
+        "fidelity": 0.368,
+        "fidelity_se": 0.004402423574956564,
+        "mean_signed_work": -16.22,
+        "work_se": 0.07820442012834462
+      },
+      "with_history": {
+        "fidelity": 0.5755833333333333,
+        "fidelity_se": 0.0045119024047717594,
+        "mean_signed_work": -14.093850000000002,
+        "work_se": 0.08794049868557388
+      }
+    },
+    {
+      "amplitude": 8.0,
+      "reference": {
+        "fidelity": 0.37216666666666665,
+        "fidelity_se": 0.004412658296394673,
+        "mean_signed_work": -22.242533333333334,
+        "work_se": 0.10061373637697978
+      },
+      "with_history": {
+        "fidelity": 0.6155833333333334,
+        "fidelity_se": 0.004440725288504453,
+        "mean_signed_work": -19.671466666666667,
+        "work_se": 0.11324299702112926
+      }
+    },
+    {
+      "amplitude": 10.0,
+      "reference": {
+        "fidelity": 0.37766666666666665,
+        "fidelity_se": 0.004425631363202652,
+        "mean_signed_work": -28.220416666666665,
+        "work_se": 0.12076874765324519
+      },
+      "with_history": {
+        "fidelity": 0.6305833333333334,
+        "fidelity_se": 0.004405942890532017,
+        "mean_signed_work": -25.099,
+        "work_se": 0.13943481384204168
+      }
+    }
+  ],
+  "limitations": [
+    "The protocol ends with nonzero target-dependent fields, so signed actuator work is not W_diss.",
+    "The target is selected using information correlated with X0; a feedback-information correction is required for a thermodynamic dissipation inequality.",
+    "This scan only tests one scalar amplitude in a linear-ramp family; it is not global optimal control."
+  ]
+}

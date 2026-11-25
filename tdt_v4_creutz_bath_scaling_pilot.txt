@@ -1,0 +1,24 @@
+CREUTZ BATH-SIZE SCALING PILOT
+Ntraj=100000 H=12 control_sweeps=10
+Model: ring; J_SS=2 on 7 internal system bonds, J_interface=1, J_BB=1; demon explicit; E_d0=0.
+WARNING: Wrec is measured; Wdiss=Wrec-DeltaF is NOT reported because isolated microcanonical model has no externally fixed T or canonical DeltaF.
+
+BATH=8 TOTAL_SPINS=16 E_spin0=13 X0=1010101110010110
+t=0 exact=100000/100000 p=1 Wrec=0 SE=0 demon_mean=0 mean_matching_spins=16/16 relax_accepts/traj=0 ctrl_accepts/traj=0
+t=1 exact=24/100000 p=0.00024 Wrec=25.9548 SE=0.10623344 demon_mean=38.71672 mean_matching_spins=10.04656/16 relax_accepts/traj=15.75701 ctrl_accepts/traj=118.35075
+t=5 exact=14/100000 p=0.00014 Wrec=35.82888 SE=0.12602421 demon_mean=48.87004 mean_matching_spins=9.49969/16 relax_accepts/traj=79.43928 ctrl_accepts/traj=129.33699
+
+BATH=16 TOTAL_SPINS=24 E_spin0=17 X0=101010111001011001010010
+t=0 exact=100000/100000 p=1 Wrec=0 SE=0 demon_mean=0 mean_matching_spins=24/24 relax_accepts/traj=0 ctrl_accepts/traj=0
+t=1 exact=0/100000 p=0 Wrec=28.03944 SE=0.12741857 demon_mean=45.29076 mean_matching_spins=14.67304/24 relax_accepts/traj=23.80145 ctrl_accepts/traj=185.76319
+t=5 exact=0/100000 p=0 Wrec=43.49328 SE=0.15640781 demon_mean=60.87414 mean_matching_spins=13.80514/24 relax_accepts/traj=119.6476 ctrl_accepts/traj=203.1527
+
+BATH=32 TOTAL_SPINS=40 E_spin0=17 X0=1010101110010110010100101110100010111100
+t=0 exact=100000/100000 p=1 Wrec=0 SE=0 demon_mean=0 mean_matching_spins=40/40 relax_accepts/traj=0 ctrl_accepts/traj=0
+t=1 exact=0/100000 p=0 Wrec=33.92544 SE=0.14910101 demon_mean=51.41644 mean_matching_spins=24.05796/40 relax_accepts/traj=39.3763 ctrl_accepts/traj=317.8775
+t=5 exact=0/100000 p=0 Wrec=58.07112 SE=0.19906203 demon_mean=75.54962 mean_matching_spins=22.42751/40 relax_accepts/traj=198.7297 ctrl_accepts/traj=350.27839
+
+BATH=64 TOTAL_SPINS=72 E_spin0=17 X0=101010111001011001010010111010001011110000101100111100010000101000010010
+t=0 exact=100000/100000 p=1 Wrec=0 SE=0 demon_mean=0 mean_matching_spins=72/72 relax_accepts/traj=0 ctrl_accepts/traj=0
+t=1 exact=0/100000 p=0 Wrec=40.78824 SE=0.17705651 demon_mean=58.7572 mean_matching_spins=42.6178/72 relax_accepts/traj=70.44953 ctrl_accepts/traj=586.51297
+t=5 exact=0/100000 p=0 Wrec=80.55 SE=0.26147574 demon_mean=98.15434 mean_matching_spins=39.35987/72 relax_accepts/traj=356.07606 ctrl_accepts/traj=650.66943

@@ -1,0 +1,34 @@
+{
+  "model": {
+    "L": 4,
+    "N": 16,
+    "states": 65536,
+    "J": 1.0,
+    "beta": 0.4,
+    "gamma": 1.0,
+    "T": 1.0,
+    "h": 0.0
+  },
+  "krylov": {
+    "MAP_success": 0.34377512266586185,
+    "H_X0_given_M_bits": 6.854905134675901,
+    "partition_error": 1.5543122344752192e-15
+  },
+  "uniformization": {
+    "lambda_max_exit": 15.373348435251778,
+    "poisson_mean": 15.373348435251778,
+    "n_terms": 55,
+    "poisson_tail_bound": 4.26917696490879e-15,
+    "MAP_success": 0.3437751226658602,
+    "H_X0_given_M_bits": 6.854905134675869,
+    "partition_error": 5.773159728050814e-15
+  },
+  "cross_method": {
+    "max_abs_conditional_probability_difference": 2.55351295663786e-15,
+    "MAP_absolute_difference": 1.6653345369377348e-15,
+    "conditional_entropy_abs_difference_bits": 3.197442310920451e-14,
+    "magnetization_marginal_max_abs_difference": 9.992007221626409e-16
+  },
+  "runtime_seconds": 5.148838520050049,
+  "interpretation": "Inference-only MAP benchmark; not physical reconstruction. Krylov and independent uniformization both evaluate the same continuous-time CTMC at T=1."
+}

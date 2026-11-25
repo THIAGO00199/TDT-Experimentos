@@ -1,0 +1,75 @@
+CRISTAL GÊMEO — 8 SPINS — RELATÓRIO DE CONTINUAÇÃO
+Data: 2026-11-13
+
+MODELO
+- Anel de Ising periódico, N=8, 256 microestados.
+- J=1, kBT=1, beta=1, gamma=1, campo final hf=1.
+- Dinâmica de Glauber de flip único, gerador CTMC esparso.
+- História A: Gibbs exato em hf=1.
+- História B matemática usada neste teste: ansatz exponencial com viés local alpha=1.5 no elo (0,1), com beta_B e multiplicador de magnetização recalibrados para igualar a energia média e M de A.
+
+ALVO MATEMÁTICO A/B
+A:
+  E = -15.8566007258607
+  M = 7.947473768576358
+  Fneq = -16.022825728764193
+  correlações de todos os elos = 0.9886408696605425 (aprox.)
+
+B matemática, alpha=1.5:
+  E = -15.8566007258607
+  M = 7.947473768576358
+  Fneq = -16.017767983287076
+  delta Fneq = +0.005057745477117
+  C(0,1) = 0.9992541996414354
+  média dos outros 7 elos = 0.9871246796632718
+  contraste C(0,1)-média(outros) = 0.012129519978163472
+  KL(B||A) = delta Fneq/(kBT) = 0.005057745477117 nats
+A e B têm as mesmas médias E e M, mas distribuições e correlações diferentes. B é uma construção matemática, ainda não uma preparação física comprovada.
+
+TESTE DE PULSO DE CAMPO LOCAL
+- Campos retangulares adicionais nos spins 0 e 1 durante tp; depois campos extras removidos e sistema evolui sob hf=1.
+- Busca multi-início (9 condições iniciais) encontrou o mesmo ramo de mínimo, encostado nos limites de controle.
+- Melhor: g0=g1=+6, tp=2.40636, espera tw=0.020.
+- Erros em relação ao alvo B:
+  delta E = -0.03387349
+  delta M = +0.01304552
+  contraste de correlação = 0.00844446 (alvo 0.01212952)
+Conclusão: esse protocolo retangular de campo não preparou B.
+
+TESTE ALTERNATIVO — PULSO DE ACOPLAMENTO LOCAL
+- Pulso no elo (0,1), J01=J+deltaJ, durante tp; depois J01 retorna a J e o sistema relaxa sob o Hamiltoniano base.
+- 18 inicializações de ajuste convergiram ao mesmo ramo de mínimo, próximo dos limites.
+- Melhor: deltaJ=19.15945 (J01=20.15945), tp=12.0, tw=0.03606245.
+- Resultado:
+  delta E = -0.01062138851
+  delta M = -0.0000391631433
+  erro em C(0,1) = -1.64e-8
+  contraste = 0.01060656529 (alvo 0.01212951998)
+  distância L1 até B matemática = 0.01032603
+Conclusão: aproxima a correlação selecionada e a magnetização, mas não iguala a energia nem o padrão dos outros sete elos. É um pulso de interação local, não um pulso de campo nos spins; também não valida o protocolo pedido.
+
+STATUS DE R
+R NÃO FOI MEDIDO. Não foi executada a otimização de reversão de 80 parâmetros, pois a preparação física de B não passou o critério de emparelhamento. Não atribuir um valor numérico experimental de R a esses resultados parciais.
+
+IDENTIDADE TERMODINÂMICA RELEVANTE
+Para uma CTMC com balanço detalhado local e trabalho positivo sobre o sistema:
+  W - delta Fneq = kBT * sigma_Schnakenberg
+onde sigma_Schnakenberg é a produção total de entropia adimensional (nats), calculada independentemente pelas correntes microscópicas. Se Sigma estiver em unidades de entropia, a forma equivalente é W-deltaFneq=T*Sigma.
+Assim, para duas recuperações:
+  R = [W_B-W_A]-[deltaF_B-deltaF_A]-kBT[sigma_B-sigma_A] = 0
+como identidade clássica, dentro do erro numérico. Logo, R não é um observável livre capaz de revelar uma contribuição TDT adicional se Sigma for essa produção total de entropia. Calcular Sigma a partir de (W-deltaF)/T e depois usar o resultado em R seria circular.
+
+PRÓXIMA ETAPA CIENTIFICAMENTE VÁLIDA
+1. Definir uma preparação física mais geral que efetivamente alcance a distribuição B (ou reformular B para uma família de preparações alcançável), verificando E, M, os oito elos e a distância L1.
+2. Só então fazer as duas reversões com controles iguais.
+3. Calcular W pela integral de trabalho e sigma_Schnakenberg diretamente dos fluxos p_x q_xy, sem inferi-lo de W-deltaF.
+4. Reportar o resíduo de balanço como controle de consistência; uma hipótese TDT precisa prever uma quantidade independente da identidade clássica acima.
+
+ARQUIVOS NO GARUDA
+- cristal_gemeo_8spin_matched_distributions_h1.py
+- cristal_gemeo_8spin_matched_distributions_h1.json
+- cristal_gemeo_8spin_pulse_fit.py
+- cristal_gemeo_8spin_pulse_fit.json
+- cristal_gemeo_8spin_pulse_fit_symmetric.py
+- cristal_gemeo_8spin_local_bond_pulse.py
+- cristal_gemeo_8spin_local_bond_pulse.json

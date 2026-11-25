@@ -1,0 +1,56 @@
+{
+  "model": {
+    "L": 4,
+    "N": 16,
+    "microstates": 65536,
+    "boundary": "periodic",
+    "J": 1.0,
+    "beta": 0.4,
+    "gamma": 1.0,
+    "observation_time": 1.0,
+    "control_time": 1.0,
+    "control_steps": 20,
+    "local_field_max_abs": 3.0,
+    "prior": "Gibbs at beta=0.4, h=0",
+    "dynamics": "continuous-time single-spin-flip Glauber via Gillespie"
+  },
+  "sampling": {
+    "trajectories": 20000,
+    "seed": 20261112,
+    "paired_same_X0_and_XT": true
+  },
+  "bayesian_reference": {
+    "H_X0_given_M_T_bits": 6.854905134675901,
+    "exact_MAP_guess_probability": 0.34377512266586185,
+    "conditional_partition_error": 1.5543122344752192e-15
+  },
+  "no_auxiliary_controller": {
+    "information": "M_T only; target is exact posterior MAP microstate for observed magnetization",
+    "mean_work_actuator": -38.16288,
+    "se_work_actuator": 0.08741798156246244,
+    "exact_reconstruction_fidelity": 0.2733,
+    "fidelity_se": 0.0031512466580704214
+  },
+  "with_X0_controller": {
+    "information": "X0 and M_T; target is the original microstate X0",
+    "mean_work_actuator": -37.433775,
+    "se_work_actuator": 0.06917087261231888,
+    "exact_reconstruction_fidelity": 0.31295,
+    "fidelity_se": 0.00327881302836865
+  },
+  "paired_comparison": {
+    "delta_work_no_info_minus_with_info": -0.7291050000000001,
+    "delta_work_se": 0.07205684130856499,
+    "mean_work_difference_over_kT_ln2_Hcond": -0.0613794733623009,
+    "memory_conditional_entropy_bits": 6.854905134675901
+  },
+  "memory_accounting": {
+    "conditional_memory_erasure_entropy_bits": 6.854905134675901,
+    "landauer_minimum_erasure_work_kT_ln2_H": 11.878645417766233,
+    "kT": 2.5,
+    "kB": 1.0,
+    "warning": "This is an ideal reversible lower bound for erasing a memory of X0 when M_T is available. It is not the physical cost of writing, storing, or reading X0, and is not included in actuator work."
+  },
+  "protocol_warning": "Fixed open-loop local-field ramp, not optimized. Controller receives no observations during actuation. Monte Carlo finite-sample estimates. The MAP benchmark is an inference bound, not guaranteed physical fidelity.",
+  "runtime_seconds": 39.046013593673706
+}

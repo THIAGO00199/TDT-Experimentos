@@ -1,0 +1,139 @@
+{
+  "model": "3-bit register with 8 physical states; five M_T codewords and three unused patterns regularized at 1e-6",
+  "parameters": {
+    "beta": 0.4,
+    "kT": 2.5,
+    "nu": 1.0,
+    "barrier_offset": 0.5,
+    "final_excitation": 30.0,
+    "regularization_per_state": 1e-06
+  },
+  "encoding": {
+    "-4": "000",
+    "-2": "001",
+    "0": "010",
+    "2": "011",
+    "4": "100"
+  },
+  "write_read": {
+    "controlled_XOR_roundtrip_all_inputs": true,
+    "failures": 0,
+    "ideal_gate_work_degenerate_register": 0.0,
+    "qualification": "Logical reversibility only. A physical gate Hamiltonian/coupling and finite-time gate dissipation are not modeled."
+  },
+  "reset_protocol": {
+    "initial_register_distribution": [
+      0.22201083869190388,
+      0.17929288520759104,
+      0.1973921772013853,
+      0.17929288520759099,
+      0.22201083869190388,
+      1.24999875000125e-07,
+      1.24999875000125e-07,
+      1.24999875000125e-07
+    ],
+    "initial_energies_after_frozen_landscape_preparation": [
+      0.0,
+      0.534263761831157,
+      0.29383426643792854,
+      0.5342637618311579,
+      0.0,
+      35.974810060696136,
+      35.974810060696136,
+      35.974810060696136
+    ],
+    "final_energies": [
+      0.0,
+      30.0,
+      30.0,
+      30.0,
+      30.0,
+      30.0,
+      30.0,
+      30.0
+    ],
+    "tau_relax_initial": 0.27116465071974394,
+    "work_landscape_preparation": 0.24959345876997577,
+    "H_M_bits_original": 2.315324601154372,
+    "H_register_bits_regularized": 2.315332881505318,
+    "Landauer_perfect_reset_bound_original": 4.012151798428082,
+    "Landauer_perfect_reset_bound_regularized": 4.012166147182862,
+    "equilibrium_deltaF_reset_stage": 3.762465167008906,
+    "runs": [
+      {
+        "tau": 10.0,
+        "work_dynamic_reset": 5.834119570061896,
+        "deltaF_reset_stage": 3.762465167008906,
+        "dissipation_reset_stage": 2.0716544030529898,
+        "work_landscape_preparation": 0.24959345876997577,
+        "total_work_prepare_plus_reset": 6.0837130288318715,
+        "P_000_final": 0.9985645797344442,
+        "final_entropy_bits": 0.019639110884760558,
+        "final_distribution": [
+          0.9985645797344442,
+          0.0002269477743608375,
+          0.00022744915153568074,
+          0.00022694777436083765,
+          0.0002280676809875615,
+          0.00017533596143696638,
+          0.00017533596143696627,
+          0.00017533596143696632
+        ],
+        "solver_nfev": 638
+      },
+      {
+        "tau": 100.0,
+        "work_dynamic_reset": 3.938926700260806,
+        "deltaF_reset_stage": 3.762465167008906,
+        "dissipation_reset_stage": 0.17646153325190017,
+        "work_landscape_preparation": 0.24959345876997577,
+        "total_work_prepare_plus_reset": 4.188520159030782,
+        "P_000_final": 0.9999533508824027,
+        "final_entropy_bits": 0.0008694332255902922,
+        "final_distribution": [
+          0.9999533508824027,
+          6.726415153360743e-06,
+          6.7274389565075816e-06,
+          6.72641515336074e-06,
+          6.728690897384812e-06,
+          6.58005247898702e-06,
+          6.580052478987014e-06,
+          6.580052478987022e-06
+        ],
+        "solver_nfev": 3518
+      },
+      {
+        "tau": 1000.0,
+        "work_dynamic_reset": 3.7797335895239224,
+        "deltaF_reset_stage": 3.762465167008906,
+        "dissipation_reset_stage": 0.01726842251501637,
+        "work_landscape_preparation": 0.24959345876997577,
+        "total_work_prepare_plus_reset": 4.029327048293898,
+        "P_000_final": 0.9999566846869979,
+        "final_entropy_bits": 0.0008119360651868308,
+        "final_distribution": [
+          0.9999566846869979,
+          6.1936069164264866e-06,
+          6.193698147449769e-06,
+          6.193606916426508e-06,
+          6.1938096488570315e-06,
+          6.1801971224512476e-06,
+          6.180197122451249e-06,
+          6.180197122451154e-06
+        ],
+        "solver_nfev": 15482
+      }
+    ]
+  },
+  "checks": {
+    "generator_row_sum_error": 4.440892098500626e-16,
+    "detailed_balance_max": 1.0587911840678754e-22
+  },
+  "limitations": [
+    "The landscape-preparation stage assumes the register is kinetically frozen while its energy levels are raised; energetic cost W_prepare is included, but the physical mechanism and cost of barrier switching are not modeled.",
+    "Write/read are reversible controlled-XOR logic gates, not finite-time physical gate simulations.",
+    "Reset uses an 8-state continuous-time master equation with Arrhenius rates satisfying detailed balance; work is integrated from the time-dependent state energies.",
+    "Three unused bit patterns have tiny nonzero regularization probability to permit finite Gibbs energies.",
+    "Input-source preparation, detector, controller electronics, and their reset costs are outside this isolated register test."
+  ]
+}

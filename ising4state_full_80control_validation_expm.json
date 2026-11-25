@@ -1,0 +1,14 @@
+{
+  "reference": {
+    "fidelity_exact_expm": 0.449999974011403,
+    "actuator_work_exact_expm": 0.008136553612862155,
+    "deltaF_exact_expm": -0.32996269629751573,
+    "dissipated_work_exact_expm": 0.3380992499103779
+  },
+  "informed": {
+    "fidelity_exact_expm": 0.4499999998804834,
+    "actuator_work_exact_expm": 0.3578323322821549,
+    "deltaF_exact_expm": 0.29110086980722993,
+    "dissipated_work_exact_expm": 0.06673146247492495
+  }
+}

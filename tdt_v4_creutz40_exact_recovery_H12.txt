@@ -1,0 +1,20 @@
+MODEL Creutz demon, 40-spin ring; system=0..7, bath=8..39
+J_SS=2, J_BB=1, J_SB=1; E_d0=0; H=12; control_sweeps=50
+X0=1010101110010110010100101110100010111100; E_spin0=17; E_total=17
+Ntraj=100000; sweep=40 attempted single-spin updates
+
+CONTROL SYSTEM_ONLY_8
+t_sweeps=0 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=-8.80008 SE=0.036582733 demon_mean=5.2733 mean_overlap40=23.60783 accept_relax_per_traj=0 accept_ctrl_per_traj=1437.1562
+t_sweeps=1 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=14.1768 SE=0.08897799 demon_mean=32.1898 mean_overlap40=21.11499 accept_relax_per_traj=39.379 accept_ctrl_per_traj=1846.53
+t_sweeps=2 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=19.86528 SE=0.097106017 demon_mean=37.84212 mean_overlap40=20.89825 accept_relax_per_traj=79.21563 accept_ctrl_per_traj=1878.8364
+t_sweeps=5 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=20.52816 SE=0.098067932 demon_mean=38.47886 mean_overlap40=20.85694 accept_relax_per_traj=198.71669 accept_ctrl_per_traj=1882.2799
+t_sweeps=10 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=20.75712 SE=0.09890745 demon_mean=38.70212 mean_overlap40=20.88021 accept_relax_per_traj=397.91197 accept_ctrl_per_traj=1882.3286
+t_sweeps=20 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=20.74248 SE=0.098280143 demon_mean=38.67974 mean_overlap40=20.8642 accept_relax_per_traj=796.29095 accept_ctrl_per_traj=1882.9267
+
+CONTROL ALL_40
+t_sweeps=0 success=100000/100000 p_exact=1 KL_delta_to_final=-0 KL95_lower_if_zero=-1 Wrec_signed=0 SE=0 demon_mean=0 mean_overlap40=40 accept_relax_per_traj=0 accept_ctrl_per_traj=0
+t_sweeps=1 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=33.96672 SE=0.14992073 demon_mean=51.45358 mean_overlap40=24.06561 accept_relax_per_traj=39.37589 accept_ctrl_per_traj=1592.6345
+t_sweeps=2 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=54.86544 SE=0.19273404 demon_mean=72.3252 mean_overlap40=22.62611 accept_relax_per_traj=79.21105 accept_ctrl_per_traj=1737.2774
+t_sweeps=5 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=58.18608 SE=0.19759781 demon_mean=75.64706 mean_overlap40=22.44676 accept_relax_per_traj=198.72618 accept_ctrl_per_traj=1754.7295
+t_sweeps=10 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=58.20768 SE=0.19851965 demon_mean=75.618 mean_overlap40=22.43796 accept_relax_per_traj=397.92048 accept_ctrl_per_traj=1755.1032
+t_sweeps=20 success=0/100000 p_exact=0 KL_delta_to_final=-1 KL95_lower_if_zero=10.414313 Wrec_signed=58.54632 SE=0.19909546 demon_mean=76.00598 mean_overlap40=22.44229 accept_relax_per_traj=796.27216 accept_ctrl_per_traj=1755.7169

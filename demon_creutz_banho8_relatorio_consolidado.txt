@@ -1,0 +1,198 @@
+DEMONIO DA MANUTENCAO — CREUTZ COM BANHO FINITO DE 8 SPINS
+Relatorio consolidado
+Data: 2026-11-13
+Diretorio: /home/iknowyou/TDT_Experimentos/
+
+1. RESUMO EXECUTIVO
+- Implementado um controlador feedforward de oito campos locais para manter duas distribuicoes iniciais A e B em um sistema de 8 spins acoplado a um banho finito de 8 spins, com demon de Creutz limitado.
+- Foram otimizados controladores separados para A e B, usando a mesma funcao-objetivo, limites, horizonte e algoritmo.
+- Validacao: 50.000 trajetorias por condicao.
+- O controlador reduziu a divergencia media KL em relacao ao alvo em 33,4% para A e 31,3% para B, mas nao manteve as distribuicoes de forma proxima (KL media final ainda > 1 nat).
+- Sob agendas otimizadas separadamente, B teve trabalho liquido medio menos negativo que A; diferenca pareada W_B-W_A = +0,0029325 +/- 0,0013205. Ambos os protocolos, contudo, tiveram trabalho liquido negativo: o sistema forneceu trabalho liquido ao controlador.
+- A diferenca liquida muda e quase desaparece quando se aplica exatamente a mesma agenda de campos as duas historias. Portanto, nao e uma propriedade universal da historia independente do controlador.
+- O balanco de energia do sistema+banho+interface+demon fecha por trajetoria a aproximadamente 1e-14. Este e um teste de consistencia/conservacao de energia, nao um residuo TDT independente.
+- Nao foi demonstrado um excesso de manutencao que sobreviva a comparacao com o proprio modelo classico de Creutz.
+
+2. MODELO CREUTZ UTILIZADO
+- 8 spins de sistema (sites 0..7) + 8 spins de banho (sites 8..15), anel periodico de 16 sitios.
+- Acoplamentos J=1 em todos os 16 elos, incluindo as duas interfaces sistema-banho.
+- Campo hf=1 aplicado apenas aos 8 spins do sistema.
+- Demon com energia ED inicial 0 e limites 0 <= ED <= 20.
+- Em cada tentativa, escolhe-se um dos 16 spins uniformemente.
+- A variacao de energia de flip inclui os acoplamentos com vizinhos, campo base hf (sistema) e campo de controle ui(t).
+- Aceita-se o flip se ED - deltaE permanecer entre 0 e 20; atualiza-se ED <- ED - deltaE.
+- A atualizacao interna conserva H_spins(t)+ED exatamente quando os campos estao fixos.
+- Ao alterar os campos externamente, o trabalho incremental e contabilizado como deltaW = -sum_i s_i delta(ui).
+- O banho inicia com configuracao uniforme aleatoria independente do sistema; ED=0 em todas as trajetorias.
+- Nao houve pre-equilibracao do banho antes da manutencao. A condicao inicial do banho e uma escolha comum e explicitamente fora de equilibrio.
+
+Nota de comparabilidade:
+Os scripts Creutz anteriores usavam J=2 nos elos internos do sistema e J=1 no resto da cadeia. Para este experimento, foi usada a variante uniforme J=1 em todo o anel, e as distribuicoes A/B foram reconstruidas para o Hamiltoniano aberto de 8 spins correspondente ao segmento do anel. Isto evita combinar distribuicoes construidas para outro Hamiltoniano com o novo banho. Os resultados aqui pertencem a esta variante, nao sao uma reproducao numerica exata dos antigos parametros J_sys=2.
+
+3. DISTRIBUICOES INICIAIS
+Hamiltoniano do segmento do sistema:
+  H_sys(s) = -J sum_{i=0}^{6} s_i s_(i+1) - hf sum_{i=0}^{7} s_i
+Com J=1, hf=1, beta=1, kBT de referencia=1.
+
+Historia A:
+- Gibbs exato do Hamiltoniano acima.
+- E medio = -14.7186814462
+- Magnetizacao media = 7.86731161727
+- Entropia de Shannon = 0.339788473437 nats
+- Fneq = -15.0584699196
+- Correlacoes dos 7 elos internos:
+  [0.958647714, 0.984677569, 0.988108339, 0.988502586,
+   0.988108339, 0.984677569, 0.958647714]
+
+Historia B:
+- p_B proporcional a exp[-beta_B Eint + lambda_B M + alpha*s0*s1].
+- alpha=1.5
+- beta_B=0.932749597005257
+- lambda_B=0.935890312079438
+- E medio = -14.7186814462 (emparelhado com A)
+- Magnetizacao media = 7.86731161727 (emparelhada com A)
+- Entropia de Shannon = 0.321187011627 nats
+- Fneq = -15.0398684578
+- Fneq_B - Fneq_A = +0.01860146181
+- KL(B||A) = 0.01860146181 nats
+- Distancia L1(A,B) = 0.03856470684
+- Correlacoes dos 7 elos:
+  [0.997212420, 0.983782325, 0.982944439, 0.982717127,
+   0.981994241, 0.977258054, 0.945461222]
+
+As medias de energia e magnetizacao coincidem em precisao numerica, mas as distribuicoes/correlacoes sao diferentes.
+B e inicializada diretamente por amostragem da distribuicao matematica. Sua preparacao fisica por pulso continua nao demonstrada.
+
+4. CONTROLADOR DE MANUTENCAO
+- Oito campos locais ui(t), aplicados apenas ao sistema.
+- Cada campo tem cinco coeficientes em uma base sin(pi*t)*Legendre_k(2t-1): 40 parametros.
+- 50 nos/segmentos ao longo de 50 sweeps; cada sweep corresponde a 16 tentativas de flip.
+- Campos nulos no inicio e no fim.
+- Limite de coeficiente: [-3,+3].
+- Otimizacao SPSA: 60 iteracoes, 700 trajetorias de treino por avaliacao.
+- Validacao final: 50.000 trajetorias por condicao.
+- Mesma funcao-objetivo, regularizacao e limites para A e B.
+- Funcao-objetivo: media temporal da cross-entropy em relacao ao alvo menos a entropia do alvo (estimador de KL em media), mais lambda_u*media(u^2) + lambda_du*media(delta-u^2).
+- lambda_u=0.01, lambda_du=0.0002.
+- Controlador feedforward (agenda aberta), nao feedback adaptativo em tempo real.
+
+5. RESULTADOS SEM CONTROLE
+A:
+- KL temporal media = 2.5701974462 nats.
+- Variacao media de energia do sistema = +2.62516.
+- Variacao media de energia do banho = -2.90684.
+- Variacao da interface = -0.82016.
+- Variacao do demon = +1.10184.
+
+B:
+- KL temporal media = 2.74901150469 nats.
+- Variacao media de energia do sistema = +2.61504.
+- Variacao media de energia do banho = -2.89968.
+- Variacao da interface = -0.81712.
+- Variacao do demon = +1.10176.
+
+Sem controle, o sistema perde rapidamente a distribuicao-alvo, tanto em A quanto em B.
+
+6. RESULTADOS COM CONTROLE OTIMIZADO SEPARADAMENTE
+A com controlador A:
+- KL temporal media = 1.7121830462 nats.
+- Trabalho liquido W = -0.05696996032.
+- Trabalho positivo recebido Wpos = 3.2879525907.
+- Trabalho negativo devolvido Wreturn = 3.3449225510.
+- Erro-padrao de W = 0.00118612.
+- Media de u^2 = 0.07651558.
+- Media de delta-u^2 = 0.00041164.
+- Variacao media de energia sistema = +2.31664.
+- Variacao media de energia banho = -3.30056.
+- Variacao media de energia interface = -0.95124.
+- Variacao media de ED = +1.87819004.
+- Magnetizacao final media = M0 - 1.09356.
+
+B com controlador B:
+- KL temporal media = 1.88882410846 nats.
+- Trabalho liquido W = -0.05315469239.
+- Trabalho positivo recebido Wpos = 3.5794734065.
+- Trabalho negativo devolvido Wreturn = 3.6326280989.
+- Erro-padrao de W = 0.00135937.
+- Media de u^2 = 0.08838824.
+- Media de delta-u^2 = 0.00052098.
+- Variacao media de energia sistema = +2.30852.
+- Variacao media de energia banho = -3.24456.
+- Variacao media de energia interface = -0.92792.
+- Variacao media de ED = +1.81080531.
+- Magnetizacao final media = M0 - 1.09356.
+
+Diferenca de trabalho:
+- W_B - W_A (diferenca das medias independentes) = +0.00381527.
+- Estimativa pareada com as mesmas sementes = +0.0029325333.
+- Erro-padrao pareado = 0.0013205108.
+- IC aproximado de 95% = [0.0003443, 0.0055207].
+O sinal e positivo para agendas otimizadas separadamente, mas ambos os trabalhos liquidos sao negativos: B permite extrair um pouco menos trabalho que A, nao exige trabalho liquido positivo.
+
+Diferencas pareadas de energia que compoem W_B-W_A:
+- Delta(delta E_sys) = +0.00548 +/- 0.01267
+- Delta(delta E_bath) = +0.05240 +/- 0.01020
+- Delta(delta E_interface) = +0.01460 +/- 0.00570
+- Delta(delta ED) = -0.0695475 +/- 0.00855
+A soma = +0.0029325, igual ao W_B-W_A pareado.
+
+7. TESTE CRUZADO: MESMA AGENDA APLICADA A A E B
+Controle identico, inicialmente otimizado para A:
+- W_B - W_A = -0.00015252 +/- 0.00041101.
+- Diferenca compativel com zero.
+- Diferenca maxima em correlacoes sistema-banho: 2.32 erros-padrao; apos 64 comparacoes, nao e um sinal robusto.
+- Diferencas em correlacoes internas do banho ficaram abaixo de 1.66 erros-padrao.
+
+8. TESTE CRUZADO: MESMA AGENDA B APLICADA A A E B
+Controle identico, inicialmente otimizado para B:
+- W_B - W_A = +0.00113850 +/- 0.00049830.
+- Pequena diferenca positiva, dependente da agenda.
+- Diferenca maxima em correlacoes sistema-banho: 2.17 erros-padrao.
+- Diferencas em correlacoes internas do banho ficaram abaixo de 1.41 erros-padrao.
+
+Interpretacao dos cruzamentos:
+A diferenca de trabalho diminui drasticamente quando a agenda de campos e mantida identica nas duas historias, e seu sinal/magnitude depende da agenda escolhida. Isso mostra que a diferenca obtida com controladores otimizados separadamente nao e uma propriedade universal independente do controlador.
+Nao ha evidencia robusta, nestes testes cruzados, de que a correlacao inicial de B deixe um padrao persistente grande nas correlacoes internas do banho apos 50 sweeps.
+
+9. MEMORIA DE CORRELACAO
+- Correlacao alvo C(0,1) de A = 0.9586477.
+- Correlacao alvo C(0,1) de B = 0.9972124.
+- Diferenca inicial = +0.0385647.
+- Apos 50 sweeps com agendas otimizadas separadamente:
+  C(0,1)_A = 0.72268
+  C(0,1)_B = 0.72072
+A diferenca inicial nesse elo foi praticamente apagada no sistema.
+O banho acumula correlacoes e energia via interacao; contudo, as comparacoes sob uma agenda identica nao encontraram um padrao robusto de correlacoes de banho/sistema-banho que persista de forma clara entre A e B.
+
+10. BALANCO DE ENERGIA E SIGNIFICADO DO RESIDUO
+Para cada trajetoria, a dinamica interna Creutz conserva H_spins+ED quando os campos ficam fixos. O trabalho externo e o unico termo que altera a energia total:
+  W_ctrl = Delta E_sys + Delta E_bath + Delta E_interface + Delta ED.
+Resultados com agendas otimizadas:
+- Residuo medio A = +2.84e-15.
+- Residuo maximo absoluto A = 1.82e-14.
+- Residuo medio B = -1.24e-15.
+- Residuo maximo absoluto B = 1.74e-14.
+
+Esse residuo quase nulo e a conservacao de energia do algoritmo Creutz, nao uma medida independente de debito temporal.
+O balanco canonico W-DeltaF=T*Sigma do teste Glauber anterior nao deve ser transplantado automaticamente: o sistema atual e um conjunto finito microcanonico com demon limitado e nao possui um termostato canonico a temperatura fixa durante toda a trajetoria.
+Nao foi estimada uma producao de entropia de Schnakenberg para o espaco completo sistema+banho+demon; a variavel de demon e afetada pelo protocolo e o ensemble mistura diferentes shells de energia.
+Logo, um PiDin numerico independente nao foi definido nesta rodada. Se Wclassic for identificado com a variacao total de energia de sistema+banho+interface+demon, PiDin=0 por conservacao, mas isso seria uma identidade contabilistica, nao um teste independente da TDT.
+
+11. CONCLUSAO CIENTIFICA
+- O controlador Creutz preserva parcialmente a distribuicao-alvo, mas nao a mantem com alta fidelidade.
+- O custo liquido fica negativo em A e B; o sistema fornece trabalho liquido ao controlador.
+- Com controladores otimizados separadamente, B tem W menos negativo que A por cerca de 0.00293, mas isso e acompanhado por fluxos brutos de entrada e retorno maiores.
+- Quando se aplica a mesma agenda as duas historias, a diferenca liquida e quase zero para a agenda A e pequena/positiva para a agenda B.
+- A diferenca de trabalho e explicada pelo fluxo de energia entre sistema, banho, interface e demon no proprio modelo Creutz.
+- Nao surgiu um excesso universal, independente do controlador, que sustente a previsao atual PiDin>0.
+- Isto nao mata definitivamente toda a TDT. Mostra que esta operacionalizacao da TDT v1 nao produziu uma previsao adicional identificavel neste modelo classico. Para testar uma nova versao, seria necessario predefinir um observavel/debito que nao seja uma reescrita do balanco energetico e uma previsao quantitativa independente.
+
+12. ARQUIVOS
+- demon_creutz_banho8.cpp
+- demon_creutz_banho8_resultado.json
+- demon_creutz_banho8_resultado.txt
+- demon_creutz_banho8_crosscontrols.cpp
+- demon_creutz_banho8_crosscontrols.json
+- patch_creutz_banho8.py
+- patch_creutz_paired_stats.py
+- demon_creutz_banho8_relatorio_consolidado.txt

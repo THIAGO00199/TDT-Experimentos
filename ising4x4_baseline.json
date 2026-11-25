@@ -1,0 +1,80 @@
+{
+  "model": {
+    "L": 4,
+    "N_spins": 16,
+    "microstates": 65536,
+    "boundary": "periodic",
+    "J": 1.0,
+    "beta": 0.4,
+    "gamma_per_spin": 1.0,
+    "field_h": 0.0,
+    "time": 1.0,
+    "dynamics": "continuous-time single-spin-flip Glauber",
+    "energy": "E=-J sum_(right/down bonds) s_i s_j - h M"
+  },
+  "numerics": {
+    "generator_shape": [
+      65536,
+      65536
+    ],
+    "generator_nnz": 1114112,
+    "max_abs_generator_row_sum": 6.217248937900877e-15,
+    "max_relative_detailed_balance_flux_error": 9.664699608701972e-17,
+    "max_conditional_probability_partition_error": 1.5543122344752192e-15,
+    "elapsed_seconds": 4.473237752914429,
+    "propagation": "scipy expm_multiply; numerical Krylov action of matrix exponential"
+  },
+  "priors": {
+    "uniform": {
+      "H_X0_bits": 16.0,
+      "H_M_T_bits": 3.809463562412855,
+      "H_X0_given_M_T_bits": 15.619525989671136,
+      "mutual_information_bits": 0.3804740103288644,
+      "P_M_T": {
+        "-16": 0.0056913839256374325,
+        "-14": 0.01813637733341357,
+        "-12": 0.0342361449588114,
+        "-10": 0.05084860712049487,
+        "-8": 0.06723013218056302,
+        "-6": 0.08109728024656399,
+        "-4": 0.09228201460490865,
+        "-2": 0.09932100287665381,
+        "0": 0.10231411350587441,
+        "2": 0.0993210028766506,
+        "4": 0.09228201460491203,
+        "6": 0.0810972802465614,
+        "8": 0.0672301321805661,
+        "10": 0.050848607120496256,
+        "12": 0.03423614495881215,
+        "14": 0.01813637733341467,
+        "16": 0.005691383925637574
+      }
+    },
+    "gibbs_beta_0p4": {
+      "H_X0_bits": 8.273491832934397,
+      "H_M_T_bits": 3.619272094622895,
+      "H_X0_given_M_T_bits": 6.854905134675791,
+      "mutual_information_bits": 1.418586698258606,
+      "P_M_T": {
+        "-16": 0.17185691741833575,
+        "-14": 0.11208426756638788,
+        "-12": 0.0703872564624372,
+        "-10": 0.044592660977553426,
+        "-8": 0.031640568548098054,
+        "-6": 0.023625104629015074,
+        "-4": 0.019569836048506026,
+        "-2": 0.01754025673674709,
+        "0": 0.017406263225911624,
+        "2": 0.017540256736747598,
+        "4": 0.019569836048502983,
+        "6": 0.02362510462901044,
+        "8": 0.03164056854809642,
+        "10": 0.04459266097755483,
+        "12": 0.07038725646244924,
+        "14": 0.11208426756637292,
+        "16": 0.17185691741830983
+      }
+    }
+  },
+  "interpretation": "Baseline uncontrolled dynamics only. Conditional entropy is uncertainty about X0 after observing M_T; it is not automatically an operational erasure cost or a reconstruction work."
+}

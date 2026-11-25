@@ -1,0 +1,66 @@
+CONTROLLED NESTED INITIALS: same 8-spin system X0=10101010; bath prefixes nested; H=12; CTRL=50; Ntraj=100000
+Creutz demon explicit; E_total conserved during each fixed-field segment; ring bonds J=2 within system, J=1 elsewhere.
+
+BATH=8 N=16 E_spin0=15 X0=1010101011001011
+CONTROL=SYSTEM_8
+t=0 exact=474/100000 p=0.00474 -lnp=5.351718143 zero_count_KL95lower=-1 W=0 SE=0 demon=1.87188 overlap_all=12.01904 accepted_relax=0 accepted_control=361.7034
+t=1 exact=5/100000 p=5e-05 -lnp=9.903487553 zero_count_KL95lower=-1 W=17.45328 SE=0.08409015978 demon=32.14486 overlap_all=9.19847 accepted_relax=15.83323 accepted_control=672.42908
+t=2 exact=7/100000 p=7e-05 -lnp=9.567015316 zero_count_KL95lower=-1 W=22.23552 SE=0.09254777201 demon=37.23934 overlap_all=8.98539 accepted_relax=31.79659 accepted_control=695.82466
+t=5 exact=7/100000 p=7e-05 -lnp=9.567015316 zero_count_KL95lower=-1 W=22.98072 SE=0.09356449478 demon=38.04208 overlap_all=8.94856 accepted_relax=79.68064 accepted_control=699.335
+t=10 exact=5/100000 p=5e-05 -lnp=9.903487553 zero_count_KL95lower=-1 W=22.78032 SE=0.09355498387 demon=37.82838 overlap_all=8.95316 accepted_relax=159.49673 accepted_control=698.68637
+t=20 exact=9/100000 p=9e-05 -lnp=9.315700888 zero_count_KL95lower=-1 W=22.80576 SE=0.09365917952 demon=37.8865 overlap_all=8.94726 accepted_relax=319.12622 accepted_control=699.31596
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 -lnp=-0 zero_count_KL95lower=-1 W=0 SE=0 demon=0 overlap_all=16 accepted_relax=0 accepted_control=0
+t=1 exact=34/100000 p=0.00034 -lnp=7.98656494 zero_count_KL95lower=-1 W=25.28904 SE=0.1078207909 demon=40.11106 overlap_all=10.0173 accepted_relax=15.83831 accepted_control=597.84299
+t=2 exact=14/100000 p=0.00014 -lnp=8.873868135 zero_count_KL95lower=-1 W=34.07784 SE=0.12564328 demon=49.13838 overlap_all=9.52633 accepted_relax=31.79872 accepted_control=646.50121
+t=5 exact=6/100000 p=6e-05 -lnp=9.721165996 zero_count_KL95lower=-1 W=35.4108 SE=0.1271727661 demon=50.49638 overlap_all=9.47414 accepted_relax=79.68503 accepted_control=652.40431
+t=10 exact=12/100000 p=0.00012 -lnp=9.028018815 zero_count_KL95lower=-1 W=35.29536 SE=0.127036831 demon=50.36564 overlap_all=9.46967 accepted_relax=159.50085 accepted_control=652.48404
+t=20 exact=10/100000 p=0.0001 -lnp=9.210340372 zero_count_KL95lower=-1 W=35.19456 SE=0.1275579957 demon=50.31194 overlap_all=9.47701 accepted_relax=319.12009 accepted_control=651.68668
+
+BATH=16 N=24 E_spin0=19 X0=101010101100101100100100
+CONTROL=SYSTEM_8
+t=0 exact=3/100000 p=3e-05 -lnp=10.41431318 zero_count_KL95lower=-1 W=-1.51176 SE=0.01843822706 demon=5.0361 overlap_all=15.87538 accepted_relax=0 accepted_control=758.6582
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=13.65072 SE=0.09133913529 demon=33.23996 overlap_all=13.05295 accepted_relax=23.95541 accepted_control=1069.47352
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=19.0248 SE=0.09906875314 demon=38.75006 overlap_all=12.84626 accepted_relax=47.9393 accepted_control=1094.9135
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=19.7724 SE=0.1002292751 demon=39.46338 overlap_all=12.82268 accepted_relax=119.89757 accepted_control=1098.38531
+t=10 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=19.81128 SE=0.1001254366 demon=39.55244 overlap_all=12.81755 accepted_relax=239.82449 accepted_control=1098.39096
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=19.83792 SE=0.1002431908 demon=39.56394 overlap_all=12.83226 accepted_relax=479.67998 accepted_control=1098.35086
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 -lnp=-0 zero_count_KL95lower=-1 W=0 SE=0 demon=0 overlap_all=24 accepted_relax=0 accepted_control=0
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=26.93904 SE=0.1311850527 demon=46.2269 overlap_all=14.60384 accepted_relax=23.95452 accepted_control=940.27916
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=40.08432 SE=0.156256382 demon=59.49234 overlap_all=13.86357 accepted_relax=47.94129 accepted_control=1014.0272
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=42.07368 SE=0.1591581054 demon=61.52468 overlap_all=13.74989 accepted_relax=119.89614 accepted_control=1024.36241
+t=10 exact=1/100000 p=1e-05 -lnp=11.51292546 zero_count_KL95lower=-1 W=42.0516 SE=0.1600726303 demon=61.46352 overlap_all=13.76094 accepted_relax=239.82397 accepted_control=1023.92311
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=42.25104 SE=0.1596095742 demon=61.70908 overlap_all=13.75381 accepted_relax=479.67861 accepted_control=1024.4861
+
+BATH=32 N=40 E_spin0=11 X0=1010101011001011001001000111111000011000
+CONTROL=SYSTEM_8
+t=0 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=-0.33 SE=0.00883804277 demon=2.35666 overlap_all=23.81357 accepted_relax=0 accepted_control=1331.09143
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=17.96808 SE=0.08217199165 demon=29.12924 overlap_all=21.21802 accepted_relax=38.37385 accepted_control=1842.63047
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=22.72368 SE=0.09059902689 demon=34.15936 overlap_all=20.99698 accepted_relax=77.55747 accepted_control=1873.16821
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=23.30592 SE=0.09105663364 demon=34.71594 overlap_all=20.9779 accepted_relax=195.17283 accepted_control=1876.61237
+t=10 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=23.43072 SE=0.09173393267 demon=34.87086 overlap_all=20.96205 accepted_relax=391.16473 accepted_control=1877.54064
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=23.45856 SE=0.0911927696 demon=34.8638 overlap_all=20.96868 accepted_relax=783.15375 accepted_control=1877.19275
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 -lnp=-0 zero_count_KL95lower=-1 W=0 SE=0 demon=0 overlap_all=40 accepted_relax=0 accepted_control=0
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=36.6708 SE=0.1419611421 demon=48.08586 overlap_all=24.34074 accepted_relax=38.36303 accepted_control=1564.12705
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=57.46152 SE=0.1862324644 demon=68.83196 overlap_all=22.76266 accepted_relax=77.57295 accepted_control=1722.29675
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=61.51536 SE=0.1938661312 demon=72.88474 overlap_all=22.56472 accepted_relax=195.15686 accepted_control=1743.26776
+t=10 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=61.06752 SE=0.1927906948 demon=72.38322 overlap_all=22.55469 accepted_relax=391.15909 accepted_control=1742.92332
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=61.34184 SE=0.193336559 demon=72.71754 overlap_all=22.55636 accepted_relax=783.14831 accepted_control=1743.08881
+
+BATH=64 N=72 E_spin0=7 X0=101010101100101100100100011111100001100000001111011010001001011110100111
+CONTROL=SYSTEM_8
+t=0 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=-2.0796 SE=0.02136428418 demon=2.86486 overlap_all=39.9368 accepted_relax=0 accepted_control=2655.16254
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=19.01328 SE=0.08177090825 demon=27.27822 overlap_all=37.26772 accepted_relax=67.66849 accepted_control=3384.23939
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=23.55696 SE=0.0882690906 demon=31.87908 overlap_all=37.04465 accepted_relax=136.70622 accepted_control=3426.56575
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=24.29568 SE=0.08946652186 demon=32.63056 overlap_all=37.02321 accepted_relax=343.86108 accepted_control=3432.81357
+t=10 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=24.26712 SE=0.08980318073 demon=32.58536 overlap_all=37.01195 accepted_relax=689.02591 accepted_control=3431.42364
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=24.29112 SE=0.08928073752 demon=32.61072 overlap_all=37.00568 accepted_relax=1379.48151 accepted_control=3432.76053
+CONTROL=ALL_SPINS
+t=0 exact=100000/100000 p=1 -lnp=-0 zero_count_KL95lower=-1 W=0 SE=0 demon=0 overlap_all=72 accepted_relax=0 accepted_control=0
+t=1 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=45.29952 SE=0.1649699187 demon=53.55682 overlap_all=43.31449 accepted_relax=67.67471 accepted_control=2867.38658
+t=2 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=79.1484 SE=0.240431317 demon=86.97138 overlap_all=40.08452 accepted_relax=136.73003 accepted_control=3190.39179
+t=5 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=86.6544 SE=0.2534275865 demon=94.31102 overlap_all=39.62165 accepted_relax=343.83389 accepted_control=3236.75298
+t=10 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=86.49936 SE=0.25510854 demon=94.26008 overlap_all=39.61823 accepted_relax=689.01429 accepted_control=3236.26328
+t=20 exact=0/100000 p=0 -lnp=-1 zero_count_KL95lower=10.41431318 W=86.5956 SE=0.2539656319 demon=94.28674 overlap_all=39.5993 accepted_relax=1379.50289 accepted_control=3237.87015

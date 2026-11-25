@@ -1,0 +1,97 @@
+Creutz amplitude scan; system fidelity target (first 8 spins); H scalar; t_relax=20; CTRL=50; coarse N=10000 per point
+
+BATH 8 N 16 X0 1010101011001011
+MODE SYSTEM_ONLY
+H=0 psys=0.0033 sys_hits=33 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=14.9866 overlapS=4.0027
+H=2 psys=0.0037 sys_hits=37 pfull=0 Wsys=0.6052 SEsys=0.07361095908 Wbath=0 SEbath=0 demon=16.1432 overlapS=4.148
+H=4 psys=0.0055 sys_hits=55 pfull=0 Wsys=3.0464 SEsys=0.129871108 Wbath=0 SEbath=0 demon=19.0126 overlapS=4.3852
+H=6 psys=0.008 sys_hits=80 pfull=0 Wsys=6.6624 SEsys=0.1746877289 Wbath=0 SEbath=0 demon=22.6068 overlapS=4.5795
+H=8 psys=0.0121 sys_hits=121 pfull=0.0001 Wsys=11.4784 SEsys=0.2221372399 Wbath=0 SEbath=0 demon=27.199 overlapS=4.7224
+H=10 psys=0.0126 sys_hits=126 pfull=0 Wsys=16.74 SEsys=0.2644867483 Wbath=0 SEbath=0 demon=32.295 overlapS=4.8544
+H=12 psys=0.0169 sys_hits=169 pfull=0.0001 Wsys=23.2968 SEsys=0.2959737674 Wbath=0 SEbath=0 demon=38.294 overlapS=4.9696
+H=14 psys=0.0148 sys_hits=148 pfull=0 Wsys=28.1064 SEsys=0.3350870751 Wbath=0 SEbath=0 demon=42.859 overlapS=4.996
+H=16 psys=0.0147 sys_hits=147 pfull=0.0001 Wsys=32.928 SEsys=0.3774316913 Wbath=0 SEbath=0 demon=47.4066 overlapS=5.0106
+H=20 psys=0.0159 sys_hits=159 pfull=0.0001 Wsys=41.192 SEsys=0.4717816376 Wbath=0 SEbath=0 demon=55.6308 overlapS=5.05
+MODE SYSTEM_AND_BATH
+H=0 psys=0.0033 sys_hits=33 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=15.0104 overlapS=4.0016
+H=2 psys=0.0045 sys_hits=45 pfull=0 Wsys=0.8024 SEsys=0.07421438825 Wbath=0.5244 SEbath=0.07614210704 demon=17.036 overlapS=4.1791
+H=4 psys=0.0058 sys_hits=58 pfull=0 Wsys=3.2008 SEsys=0.1397327733 Wbath=3.3944 SEbath=0.1425048942 demon=22.4638 overlapS=4.4057
+H=6 psys=0.0079 sys_hits=79 pfull=0.0001 Wsys=6.6516 SEsys=0.2027627721 Wbath=6.1008 SEbath=0.2020469845 demon=28.4938 overlapS=4.5734
+H=8 psys=0.0083 sys_hits=83 pfull=0 Wsys=9.3056 SEsys=0.2672019851 Wbath=10.2176 SEbath=0.264527475 demon=35.1338 overlapS=4.6005
+H=10 psys=0.0106 sys_hits=106 pfull=0.0002 Wsys=13.576 SEsys=0.3338760584 Wbath=13.476 SEbath=0.3242340858 demon=42.5448 overlapS=4.6663
+H=12 psys=0.0099 sys_hits=99 pfull=0 Wsys=17.2608 SEsys=0.3938305198 Wbath=18.3216 SEbath=0.3882381451 demon=50.66 overlapS=4.7274
+H=14 psys=0.0126 sys_hits=126 pfull=0.0001 Wsys=21.854 SEsys=0.4529357884 Wbath=20.5912 SEbath=0.4556338094 demon=57.1946 overlapS=4.7769
+H=16 psys=0.0141 sys_hits=141 pfull=0.0002 Wsys=24.7488 SEsys=0.5200223936 Wbath=23.728 SEbath=0.5165277549 demon=63.081 overlapS=4.7918
+H=20 psys=0.0127 sys_hits=127 pfull=0 Wsys=30.004 SEsys=0.6476109931 Wbath=30.484 SEbath=0.6522212618 demon=75.192 overlapS=4.7487
+
+BATH 16 N 24 X0 101010101100101100100100
+MODE SYSTEM_ONLY
+H=0 psys=0.0033 sys_hits=33 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=19.0162 overlapS=4.0007
+H=2 psys=0.0042 sys_hits=42 pfull=0 Wsys=0.3124 SEsys=0.07723005001 Wbath=0 SEbath=0 demon=19.6544 overlapS=4.0721
+H=4 psys=0.0047 sys_hits=47 pfull=0 Wsys=2.3728 SEsys=0.1346005275 Wbath=0 SEbath=0 demon=22.256 overlapS=4.3083
+H=6 psys=0.0065 sys_hits=65 pfull=0 Wsys=5.7588 SEsys=0.1860424206 Wbath=0 SEbath=0 demon=25.7624 overlapS=4.4978
+H=8 psys=0.0084 sys_hits=84 pfull=0 Wsys=9.7952 SEsys=0.2292533221 Wbath=0 SEbath=0 demon=29.7652 overlapS=4.6132
+H=10 psys=0.0094 sys_hits=94 pfull=0 Wsys=14.812 SEsys=0.2754132633 Wbath=0 SEbath=0 demon=34.6314 overlapS=4.7351
+H=12 psys=0.0129 sys_hits=129 pfull=0 Wsys=19.8816 SEsys=0.3160676481 Wbath=0 SEbath=0 demon=39.5718 overlapS=4.819
+H=14 psys=0.0154 sys_hits=154 pfull=0 Wsys=26.348 SEsys=0.346919774 Wbath=0 SEbath=0 demon=45.5112 overlapS=4.9422
+H=16 psys=0.0153 sys_hits=153 pfull=0 Wsys=31.5456 SEsys=0.3841597481 Wbath=0 SEbath=0 demon=50.2986 overlapS=4.9956
+H=20 psys=0.0168 sys_hits=168 pfull=0 Wsys=41.004 SEsys=0.4650797764 Wbath=0 SEbath=0 demon=59.4238 overlapS=5.0325
+MODE SYSTEM_AND_BATH
+H=0 psys=0.0039 sys_hits=39 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=18.9816 overlapS=4.0041
+H=2 psys=0.0055 sys_hits=55 pfull=0 Wsys=0.7312 SEsys=0.07671228491 Wbath=0.934 SEbath=0.1045828112 demon=21.2864 overlapS=4.1705
+H=4 psys=0.0038 sys_hits=38 pfull=0 Wsys=2.9464 SEsys=0.1464689479 Wbath=4.9704 SEbath=0.1903711963 demon=27.8018 overlapS=4.3541
+H=6 psys=0.007 sys_hits=70 pfull=0 Wsys=5.4144 SEsys=0.2169850393 Wbath=10.7208 SEbath=0.2742370594 demon=35.9364 overlapS=4.459
+H=8 psys=0.0091 sys_hits=91 pfull=0 Wsys=8.3408 SEsys=0.2871786648 Wbath=16.4624 SEbath=0.352518338 demon=44.3028 overlapS=4.5009
+H=10 psys=0.0099 sys_hits=99 pfull=0 Wsys=11.192 SEsys=0.3506478484 Wbath=21.09 SEbath=0.4311626027 demon=51.7902 overlapS=4.5401
+H=12 psys=0.0092 sys_hits=92 pfull=0 Wsys=13.7568 SEsys=0.4211054089 Wbath=28.5144 SEbath=0.514738088 demon=61.7456 overlapS=4.5556
+H=14 psys=0.0091 sys_hits=91 pfull=0 Wsys=17.2396 SEsys=0.4872654504 Wbath=34.6416 SEbath=0.5920219886 demon=71.0616 overlapS=4.6328
+H=16 psys=0.0105 sys_hits=105 pfull=0 Wsys=20.2816 SEsys=0.5606576764 Wbath=40.5792 SEbath=0.6749969279 demon=79.6328 overlapS=4.6449
+H=20 psys=0.0117 sys_hits=117 pfull=0 Wsys=26.172 SEsys=0.7031576222 Wbath=50.836 SEbath=0.8317031384 demon=95.7164 overlapS=4.6529
+
+BATH 32 N 40 X0 1010101011001011001001000111111000011000
+MODE SYSTEM_ONLY
+H=0 psys=0.0018 sys_hits=18 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=12.0518 overlapS=3.9964
+H=2 psys=0.0046 sys_hits=46 pfull=0 Wsys=0.9436 SEsys=0.07069088982 Wbath=0 SEbath=0 demon=13.5828 overlapS=4.2496
+H=4 psys=0.0053 sys_hits=53 pfull=0 Wsys=3.8568 SEsys=0.1257268045 Wbath=0 SEbath=0 demon=16.7736 overlapS=4.4994
+H=6 psys=0.0084 sys_hits=84 pfull=0 Wsys=8.0976 SEsys=0.1699195322 Wbath=0 SEbath=0 demon=20.7904 overlapS=4.6674
+H=8 psys=0.0099 sys_hits=99 pfull=0 Wsys=13.0544 SEsys=0.2123488264 Wbath=0 SEbath=0 demon=25.323 overlapS=4.814
+H=10 psys=0.0115 sys_hits=115 pfull=0 Wsys=17.992 SEsys=0.2480096643 Wbath=0 SEbath=0 demon=29.9436 overlapS=4.8785
+H=12 psys=0.0119 sys_hits=119 pfull=0 Wsys=23.28 SEsys=0.2891078691 Wbath=0 SEbath=0 demon=34.7884 overlapS=4.959
+H=14 psys=0.0153 sys_hits=153 pfull=0 Wsys=27.482 SEsys=0.3269601315 Wbath=0 SEbath=0 demon=38.654 overlapS=5.0072
+H=16 psys=0.0161 sys_hits=161 pfull=0 Wsys=32.656 SEsys=0.3733838861 Wbath=0 SEbath=0 demon=43.4516 overlapS=5.0359
+H=20 psys=0.0149 sys_hits=149 pfull=0 Wsys=40.896 SEsys=0.4623588632 Wbath=0 SEbath=0 demon=51.754 overlapS=5.0257
+MODE SYSTEM_AND_BATH
+H=0 psys=0.0017 sys_hits=17 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=12.0206 overlapS=3.9958
+H=2 psys=0.0045 sys_hits=45 pfull=0 Wsys=0.9276 SEsys=0.07397861734 Wbath=4.2092 SEbath=0.1323472083 demon=17.8904 overlapS=4.259
+H=4 psys=0.0047 sys_hits=47 pfull=0 Wsys=3.188 SEsys=0.1464742489 Wbath=12.5888 SEbath=0.2343929424 demon=28.1444 overlapS=4.3914
+H=6 psys=0.007 sys_hits=70 pfull=0 Wsys=4.9716 SEsys=0.2188102359 Wbath=21.2976 SEbath=0.331744877 demon=38.3476 overlapS=4.4446
+H=8 psys=0.0076 sys_hits=76 pfull=0 Wsys=7.6464 SEsys=0.2904302613 Wbath=31.0976 SEbath=0.4388907921 demon=50.6794 overlapS=4.4836
+H=10 psys=0.0073 sys_hits=73 pfull=0 Wsys=9.04 SEsys=0.3630920544 Wbath=40.392 SEbath=0.5434046684 demon=61.0434 overlapS=4.4757
+H=12 psys=0.01 sys_hits=100 pfull=0 Wsys=12.216 SEsys=0.4335252408 Wbath=48.9432 SEbath=0.6430905359 demon=72.4018 overlapS=4.4946
+H=14 psys=0.0096 sys_hits=96 pfull=0 Wsys=14.5656 SEsys=0.5048852639 Wbath=58.0972 SEbath=0.7548526844 demon=83.7806 overlapS=4.516
+H=16 psys=0.0084 sys_hits=84 pfull=0 Wsys=17.2288 SEsys=0.5868075366 Wbath=65.9904 SEbath=0.8598734737 demon=94.4006 overlapS=4.5276
+H=20 psys=0.0081 sys_hits=81 pfull=0 Wsys=20.148 SEsys=0.7273828494 Wbath=85.704 SEbath=1.084705692 demon=116.8966 overlapS=4.5267
+
+BATH 64 N 72 X0 101010101100101100100100011111100001100000001111011010001001011110100111
+MODE SYSTEM_ONLY
+H=0 psys=0.0011 sys_hits=11 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=10.4946 overlapS=3.9762
+H=2 psys=0.005 sys_hits=50 pfull=0 Wsys=1.3404 SEsys=0.0695494988 Wbath=0 SEbath=0 demon=11.8186 overlapS=4.3384
+H=4 psys=0.0065 sys_hits=65 pfull=0 Wsys=4.64 SEsys=0.1228722914 Wbath=0 SEbath=0 demon=15.079 overlapS=4.5915
+H=6 psys=0.0095 sys_hits=95 pfull=0 Wsys=9.2448 SEsys=0.1669201225 Wbath=0 SEbath=0 demon=19.0882 overlapS=4.7683
+H=8 psys=0.0128 sys_hits=128 pfull=0 Wsys=14.176 SEsys=0.2072110576 Wbath=0 SEbath=0 demon=23.3736 overlapS=4.8751
+H=10 psys=0.014 sys_hits=140 pfull=0 Wsys=18.694 SEsys=0.2444287962 Wbath=0 SEbath=0 demon=27.4802 overlapS=4.9539
+H=12 psys=0.0132 sys_hits=132 pfull=0 Wsys=24.2976 SEsys=0.2861989927 Wbath=0 SEbath=0 demon=32.6888 overlapS=5.0004
+H=14 psys=0.016 sys_hits=160 pfull=0 Wsys=29.2096 SEsys=0.3254671823 Wbath=0 SEbath=0 demon=37.0712 overlapS=5.0593
+H=16 psys=0.0136 sys_hits=136 pfull=0 Wsys=33.536 SEsys=0.3625892309 Wbath=0 SEbath=0 demon=41.2284 overlapS=5.0551
+H=20 psys=0.0147 sys_hits=147 pfull=0 Wsys=42.52 SEsys=0.4563561767 Wbath=0 SEbath=0 demon=50.2362 overlapS=5.0596
+MODE SYSTEM_AND_BATH
+H=0 psys=0.0011 sys_hits=11 pfull=0 Wsys=0 SEsys=0 Wbath=0 SEbath=0 demon=10.3514 overlapS=4.0051
+H=2 psys=0.0036 sys_hits=36 pfull=0 Wsys=0.9184 SEsys=0.07244842403 Wbath=8.3252 SEbath=0.1664013957 demon=19.4258 overlapS=4.2567
+H=4 psys=0.0057 sys_hits=57 pfull=0 Wsys=2.3832 SEsys=0.1472816206 Wbath=22.26 SEbath=0.2977310867 demon=33.4928 overlapS=4.2961
+H=6 psys=0.0087 sys_hits=87 pfull=0 Wsys=4.506 SEsys=0.2224665287 Wbath=36.5124 SEbath=0.4345736124 demon=49.3406 overlapS=4.3714
+H=8 psys=0.0083 sys_hits=83 pfull=0 Wsys=6.5264 SEsys=0.2954293999 Wbath=49.4176 SEbath=0.5718103191 demon=63.974 overlapS=4.4049
+H=10 psys=0.0068 sys_hits=68 pfull=0 Wsys=7.35 SEsys=0.3668374981 Wbath=63.262 SEbath=0.7033661462 demon=78.556 overlapS=4.3813
+H=12 psys=0.0063 sys_hits=63 pfull=0 Wsys=9.1032 SEsys=0.4425792302 Wbath=77.4384 SEbath=0.8257483276 demon=94.1984 overlapS=4.3907
+H=14 psys=0.0092 sys_hits=92 pfull=0 Wsys=11.8776 SEsys=0.5210749868 Wbath=90.0312 SEbath=0.9906462853 demon=109.462 overlapS=4.4125
+H=16 psys=0.0069 sys_hits=69 pfull=0 Wsys=12.7104 SEsys=0.5916480822 Wbath=102.7328 SEbath=1.127596267 demon=122.8918 overlapS=4.3922
+H=20 psys=0.0079 sys_hits=79 pfull=0 Wsys=16.504 SEsys=0.7431135838 Wbath=127.672 SEbath=1.397793276 demon=151.6148 overlapS=4.417

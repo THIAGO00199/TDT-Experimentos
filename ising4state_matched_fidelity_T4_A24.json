@@ -1,0 +1,42 @@
+{
+  "linear": {
+    "matched_fidelity": 0.40178052358332006,
+    "reference_amplitude": 24.0,
+    "reference": {
+      "fidelity": 0.40178052358332006,
+      "mean_actuator_work": -83.82556653957577,
+      "dissipated_work": 11.732962916867006,
+      "delta_nonequilibrium_free_energy": -95.55852945644277
+    },
+    "history_amplitude": 1.666456154721172,
+    "history": {
+      "fidelity": 0.40178053842699346,
+      "mean_actuator_work": -2.845727105088612,
+      "dissipated_work": 0.7530346253897188,
+      "delta_nonequilibrium_free_energy": -3.59876173047833
+    },
+    "dissipation_saving_before_memory": 10.979928291477288,
+    "net_after_Landauer_conditional_reset": 5.7563834997921175,
+    "net_after_dynamic_reset_tau1000": 5.615495602198136
+  },
+  "ramp_hold": {
+    "matched_fidelity": 0.40263887181730895,
+    "reference_amplitude": 24.0,
+    "reference": {
+      "fidelity": 0.40263887181730895,
+      "mean_actuator_work": -77.52485722704489,
+      "dissipated_work": 18.16689498972367,
+      "delta_nonequilibrium_free_energy": -95.69175221676856
+    },
+    "history_amplitude": 1.2930197903892326,
+    "history": {
+      "fidelity": 0.4026388877649546,
+      "mean_actuator_work": -2.282967600090137,
+      "dissipated_work": 0.5220761754036308,
+      "delta_nonequilibrium_free_energy": -2.80504377549377
+    },
+    "dissipation_saving_before_memory": 17.64481881432004,
+    "net_after_Landauer_conditional_reset": 12.421274022634869,
+    "net_after_dynamic_reset_tau1000": 12.280386125040888
+  }
+}

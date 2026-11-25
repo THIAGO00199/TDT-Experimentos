@@ -1,0 +1,73 @@
+{
+  "model": {
+    "L": 4,
+    "N": 16,
+    "J": 1.0,
+    "beta": 0.4,
+    "gamma": 1.0,
+    "prior": "Gibbs beta=.4 h=0",
+    "observation_time": 1.0,
+    "control_time": 1.0,
+    "steps": 20,
+    "field_shape": "h_i(t)=a(t)*target_spin_i; linear ramp",
+    "amplitude_grid": [
+      1.0,
+      1.5
+    ],
+    "trajectories": 20000,
+    "seed": 20261113
+  },
+  "common_fidelity_target": 0.24,
+  "selection_rule": "Among scanned amplitudes with empirical exact fidelity >= target, choose lowest field amplitude (proxy for actuator effort). This is grid-constrained optimization, not a global optimum.",
+  "results_by_amplitude": [
+    {
+      "amplitude": 1.0,
+      "no_info": {
+        "work": -12.288785,
+        "work_se": 0.03191079913044811,
+        "fidelity": 0.23785,
+        "fidelity_se": 0.0030106259938756925
+      },
+      "with_X0": {
+        "work": -12.0442,
+        "work_se": 0.02505599445527771,
+        "fidelity": 0.2417,
+        "fidelity_se": 0.003027219103401668
+      }
+    },
+    {
+      "amplitude": 1.5,
+      "no_info": {
+        "work": -18.602745000000002,
+        "work_se": 0.04677990705136059,
+        "fidelity": 0.2475,
+        "fidelity_se": 0.003051587701508839
+      },
+      "with_X0": {
+        "work": -18.2392575,
+        "work_se": 0.03696048975020239,
+        "fidelity": 0.25885,
+        "fidelity_se": 0.003097149314288867
+      }
+    }
+  ],
+  "selected_grid_minima": {
+    "no_info": {
+      "work": -18.602745000000002,
+      "work_se": 0.04677990705136059,
+      "fidelity": 0.2475,
+      "fidelity_se": 0.003051587701508839,
+      "amplitude": 1.5
+    },
+    "with_X0": {
+      "work": -12.0442,
+      "work_se": 0.02505599445527771,
+      "fidelity": 0.2417,
+      "fidelity_se": 0.003027219103401668,
+      "amplitude": 1.0
+    }
+  },
+  "paired_delta_at_selected": -6.558545000000002,
+  "limitations": "Monte Carlo estimates; separate trajectory random streams by policy and amplitude; common X0,XT sample set. The two selected amplitudes may differ. No time-shape optimization or confidence-bound constraint.",
+  "runtime_seconds": 68.49561762809753
+}

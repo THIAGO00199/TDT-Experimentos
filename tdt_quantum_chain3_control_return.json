@@ -1,0 +1,54 @@
+{
+  "model": "closed unitary two-qubit + 3-mode harmonic chain; no Lindblad bath",
+  "control_window": [
+    1.8,
+    3.4
+  ],
+  "dt": 0.07999999999999999,
+  "nsteps": 20,
+  "backflow_window_basis": "first return of reduced two-qubit trace distance, local peak near t=2.8 in free evolution",
+  "control": "four local X/Y drives, one smooth sin(pi*s) envelope times quadratic Legendre polynomial per channel; 12 coefficients",
+  "optimizer": "SPSA 100 iterations, fixed seed, 12 coefficients clipped to [-1.5,1.5]",
+  "objective": "1 - reduced-qubit Bell fidelity + 0.002 * integral(sum_j u_j(t)^2)dt",
+  "baseline": {
+    "bell_fidelity": 0.7523158606964024,
+    "infidelity": 0.24768413930359756,
+    "signed_control_work": 0.0,
+    "effort_integral_u2": 0.0,
+    "S_qubits": 0.02969672504781272
+  },
+  "optimized": {
+    "bell_fidelity": 0.7484018356361487,
+    "infidelity": 0.2515981643638513,
+    "signed_control_work": -3.38969701359881e-05,
+    "effort_integral_u2": 0.02886309531245835,
+    "success": true,
+    "message": "SPSA completed",
+    "iterations": 100,
+    "objective": 0.25165589055447624,
+    "coefficients": [
+      [
+        -0.08239396755313724,
+        0.1975364341598005,
+        -0.1262767081067299
+      ],
+      [
+        -0.024457265270800697,
+        0.012081236561875925,
+        0.09456766734972795
+      ],
+      [
+        -0.056223036650348446,
+        -0.3037568429121108,
+        -0.059745287609941466
+      ],
+      [
+        -0.10940939516535722,
+        0.03578809647085629,
+        -0.01544349541067678
+      ]
+    ],
+    "S_qubits": 0.03131192121609717
+  },
+  "runtime_s": 17.425534963607788
+}

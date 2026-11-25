@@ -1,0 +1,62 @@
+{
+  "model": "two-qubit Lindblad amplitude damping; no explicit memory modes",
+  "master_equation": "drho/dt=-i[H(t),rho]+D_gamma[rho]",
+  "heat_convention": "Q positive when energy enters system; Q=integral Tr(H(t) D_gamma[rho]) dt",
+  "work_convention": "W_ctrl from instantaneous control-field quenches, rho immediately before each quench; controls returned to zero",
+  "gamma": 0.005,
+  "gamma_scan": [
+    {
+      "gamma": 0.005,
+      "purity": 0.8488656010886839
+    },
+    {
+      "gamma": 0.01,
+      "purity": 0.7437443066025411
+    },
+    {
+      "gamma": 0.02,
+      "purity": 0.6226408231300959
+    },
+    {
+      "gamma": 0.03,
+      "purity": 0.5728177950576709
+    },
+    {
+      "gamma": 0.05,
+      "purity": 0.5756700421513542
+    },
+    {
+      "gamma": 0.08,
+      "purity": 0.6711001156517143
+    },
+    {
+      "gamma": 0.12,
+      "purity": 0.8063586740947993
+    },
+    {
+      "gamma": 0.18,
+      "purity": 0.9261558544141052
+    },
+    {
+      "gamma": 0.25,
+      "purity": 0.9781495096475821
+    }
+  ],
+  "target_purity": 0.935,
+  "optimization": {
+    "method": "projected SPSA with augmented-Lagrangian inequality penalty",
+    "seeds": 4,
+    "iterations_per_seed": 100,
+    "control_bound": 1.5,
+    "feasible_solution_found": false,
+    "chosen_is_feasible": false,
+    "W_ctrl": -0.10983979437967453,
+    "Q_bath_to_system": 0.08490791788699412,
+    "delta_E_system": -0.024931836260082108,
+    "first_law_residual": 4.023259830843173e-08,
+    "final_purity": 0.8543303124461639,
+    "constraint_violation": 0.08066968755383619,
+    "objective_with_regularizer": 0.7022602312069336
+  },
+  "comparison_note": "No TDT inference: compare only after matching target, initial state, control channels/bounds, duration, endpoint Hamiltonian, and accounting conventions. The explicit-mode closed model and this reduced Lindblad model are not microscopically identical."
+}

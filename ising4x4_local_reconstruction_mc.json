@@ -1,0 +1,57 @@
+{
+  "protocol": {
+    "lattice": "4x4 periodic Ising, J=1, beta=0.4, gamma=1",
+    "prior": "exact Gibbs beta=0.4, h=0",
+    "reference": "Gillespie Glauber at h=0 for T_ref=1",
+    "observation": "M_T only for no-auxiliary controller",
+    "actuation": "site fields h_i=H0*target_spin_i switched instantaneously from 0 to target, then held fixed during Glauber T_ctrl=1",
+    "H0": 2.0,
+    "T_ctrl": 1.0,
+    "samples": 20000,
+    "seed": 20261112,
+    "controller_no_info": "target is exact Bayesian MAP state conditional on M_T; no access to X0",
+    "controller_with_info": "target is actual X0; has access to all 16 initial spin values",
+    "paired": "same sampled X0 and same uncontrolled X_T for both controllers; independent post-switch stochastic trajectories"
+  },
+  "no_auxiliary": {
+    "exact_successes": 5833,
+    "fidelity": 0.29165,
+    "wilson_95": [
+      0.2853912502804459,
+      0.297988771144133
+    ],
+    "mean_actuator_work": -24.3588,
+    "work_SE": 0.06515593137059464
+  },
+  "with_X0": {
+    "exact_successes": 6685,
+    "fidelity": 0.33425,
+    "wilson_95": [
+      0.3277446892709197,
+      0.340818970681679
+    ],
+    "mean_actuator_work": -25.1752,
+    "work_SE": 0.04690090865603393
+  },
+  "paired_comparison": {
+    "work_difference_with_minus_without": -0.8164,
+    "work_difference_SE": 0.05076773995532013,
+    "fidelity_difference": 0.04259999999999997
+  },
+  "memory_accounting": {
+    "H_X0_given_M_T_bits": 6.854905134675901,
+    "H_X0_bits": 8.273491832934397,
+    "ideal_conditional_reset_lower_bound_kBTln2Hcond": 4.751458167106493,
+    "ideal_conditional_reset_lower_bound_energy_units_at_beta_0p4": 11.878645417766233,
+    "ideal_unconditional_reset_lower_bound_energy_units_at_beta_0p4": 14.336868843460529,
+    "note": "These are ideal Landauer lower bounds for resetting a memory register after use, not measured acquisition/storage work and not automatically additive to actuator work. Conditional reset assumes M_T remains available as side information. Actual memory architecture, measurement, writing, and reset protocol are not simulated."
+  },
+  "runtime_seconds": 80.35343050956726,
+  "limitations": [
+    "This is a fixed-amplitude open-loop local-field protocol, not an optimized minimum-work controller.",
+    "The field is switched once and held; switching work is measured exactly from the pre-switch microstate, while no work is done during the hold.",
+    "The post-switch CTMC is sampled by Gillespie; confidence intervals quantify Monte Carlo uncertainty, not model uncertainty.",
+    "The no-information controller uses M_T only to choose a MAP target and does not observe X_T microstate.",
+    "The information controller is given X0 as a classical side-information register; its thermodynamic acquisition cost is not included."
+  ]
+}

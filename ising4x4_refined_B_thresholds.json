@@ -1,0 +1,167 @@
+{
+  "n": 20000,
+  "target": 0.24,
+  "results": [
+    {
+      "Tobs": 0.5,
+      "H": 6.483170167169313,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 1.2,
+      "k_success": 5546,
+      "n": 20000,
+      "fidelity": 0.2773,
+      "fidelity_ci95_wilson": [
+        0.2711389966805259,
+        0.28354653617886316
+      ],
+      "mean_work": -14.498861999999999,
+      "work_se": 0.043189259971162304
+    },
+    {
+      "Tobs": 0.5,
+      "H": 6.483170167169313,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 1.1,
+      "k_success": 5530,
+      "n": 20000,
+      "fidelity": 0.2765,
+      "fidelity_ci95_wilson": [
+        0.2703446765110472,
+        0.28274116360603163
+      ],
+      "mean_work": -13.261853000000002,
+      "work_se": 0.039854692554898506
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 2.5,
+      "k_success": 5239,
+      "n": 20000,
+      "fidelity": 0.26195,
+      "fidelity_ci95_wilson": [
+        0.2559023700674437,
+        0.2680890582988677
+      ],
+      "mean_work": -31.65755,
+      "work_se": 0.0735604051547796
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 2.4,
+      "k_success": 5231,
+      "n": 20000,
+      "fidelity": 0.26155,
+      "fidelity_ci95_wilson": [
+        0.2555054504923924,
+        0.26768613150276394
+      ],
+      "mean_work": -30.334595999999998,
+      "work_se": 0.07140820233283582
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 1.7,
+      "k_success": 5355,
+      "n": 20000,
+      "fidelity": 0.26775,
+      "fidelity_ci95_wilson": [
+        0.2616584316710868,
+        0.2739307690769738
+      ],
+      "mean_work": -20.771432999999995,
+      "work_se": 0.04101163433140742
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 1.6,
+      "k_success": 5252,
+      "n": 20000,
+      "fidelity": 0.2626,
+      "fidelity_ci95_wilson": [
+        0.2565473782762515,
+        0.268743800443187
+      ],
+      "mean_work": -19.495528,
+      "work_se": 0.03894829414161327
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "ramp_hold",
+      "policy": "no_info",
+      "amplitude": 1.0,
+      "k_success": 4889,
+      "n": 20000,
+      "fidelity": 0.24445,
+      "fidelity_ci95_wilson": [
+        0.23854337555958383,
+        0.2504547740686912
+      ],
+      "mean_work": -12.262380000000002,
+      "work_se": 0.03195401836615369
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 3.9,
+      "k_success": 5532,
+      "n": 20000,
+      "fidelity": 0.2766,
+      "fidelity_ci95_wilson": [
+        0.27044396517876285,
+        0.2828418365311048
+      ],
+      "mean_work": -44.82269999999999,
+      "work_se": 0.11006522579450995
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 2.4,
+      "k_success": 5577,
+      "n": 20000,
+      "fidelity": 0.27885,
+      "fidelity_ci95_wilson": [
+        0.27267806226188956,
+        0.2851068752857255
+      ],
+      "mean_work": -27.008855999999994,
+      "work_se": 0.07213521456973876
+    },
+    {
+      "Tobs": 4.0,
+      "H": 7.43261530224826,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 3.1,
+      "k_success": 4981,
+      "n": 20000,
+      "fidelity": 0.24905,
+      "fidelity_ci95_wilson": [
+        0.24310505433186752,
+        0.25509132856469136
+      ],
+      "mean_work": -31.166873000000002,
+      "work_se": 0.11352424626844299
+    }
+  ],
+  "note": "Downward one- or two-step validation to bracket the lowest amplitude on the 0.1 grid; independent samples."
+}

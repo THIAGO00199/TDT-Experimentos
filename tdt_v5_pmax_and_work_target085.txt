@@ -1,0 +1,128 @@
+{
+  "protocol": {
+    "T": 18.0,
+    "NT": 180,
+    "dt": 0.1,
+    "control_channels": "local X/Y on each qubit",
+    "temporal_knots": 5,
+    "control_bound": 1.5,
+    "target_purity": 0.85
+  },
+  "markovian_purity_max_search": {
+    "method": "SPSA direct purity maximization, 8 seeds x 140 iterations, six initial candidates per seed",
+    "best_found": {
+      "seed": 7,
+      "purity": 0.8567468369640188,
+      "W_ctrl": 0.2274955120700095,
+      "Q": 0.08399480891866448,
+      "delta_E": 0.3114902496281877
+    },
+    "all_seeds": [
+      {
+        "seed": 0,
+        "purity": 0.8520456137553872,
+        "W_ctrl": 0.04204758973497224,
+        "Q": 0.08655243274299465,
+        "delta_E": 0.1286002546754501
+      },
+      {
+        "seed": 1,
+        "purity": 0.8562474727389879,
+        "W_ctrl": -0.05866645260519439,
+        "Q": 0.08333658422229709,
+        "delta_E": 0.024669844936242358
+      },
+      {
+        "seed": 2,
+        "purity": 0.8558938215349975,
+        "W_ctrl": -0.0469706001483643,
+        "Q": 0.08290137314310245,
+        "delta_E": 0.03593088157887614
+      },
+      {
+        "seed": 3,
+        "purity": 0.8535983575924229,
+        "W_ctrl": 0.20746268371868468,
+        "Q": 0.085745085418876,
+        "delta_E": 0.29320767043518625
+      },
+      {
+        "seed": 4,
+        "purity": 0.8564732590390762,
+        "W_ctrl": -0.14564082357479194,
+        "Q": 0.08297421634821527,
+        "delta_E": -0.0626666053278997
+      },
+      {
+        "seed": 5,
+        "purity": 0.8516109071303323,
+        "W_ctrl": 0.21214107403409935,
+        "Q": 0.0868996531800412,
+        "delta_E": 0.2990406698612931
+      },
+      {
+        "seed": 6,
+        "purity": 0.8550536198630305,
+        "W_ctrl": 0.19987484042275164,
+        "Q": 0.084469283872947,
+        "delta_E": 0.2843443824152647
+      },
+      {
+        "seed": 7,
+        "purity": 0.8567468369640188,
+        "W_ctrl": 0.2274955120700095,
+        "Q": 0.08399480891866448,
+        "delta_E": 0.3114902496281877
+      }
+    ],
+    "is_proven_physical_upper_bound": false,
+    "gamma": 0.005
+  },
+  "work_min_target_0.85": {
+    "memory_model": {
+      "model": "two qubits + two explicit truncated N=3 oscillator modes; closed unitary",
+      "best_feasible": {
+        "objective": -0.28259254437570713,
+        "W_ctrl": -0.2825927087647377,
+        "Q": 0.0,
+        "delta_E": -0.2825927087647343,
+        "purity": 0.8800984209295246,
+        "violation": 0.0
+      },
+      "best_near_feasible": {
+        "objective": -0.2176754178064293,
+        "W_ctrl": -0.21767562174875416,
+        "Q": 0.0,
+        "delta_E": -0.2176756217487441,
+        "purity": 0.8879098585581593,
+        "violation": 0.0
+      }
+    },
+    "markovian_model": {
+      "model": "two-qubit Lindblad amplitude damping, gamma=.005, no explicit modes",
+      "best_feasible": {
+        "objective": -0.375229148168879,
+        "W_ctrl": -0.3752293630412634,
+        "Q": 0.08837041904829193,
+        "delta_E": -0.2868588554823168,
+        "purity": 0.8509514015015476,
+        "violation": 0.0
+      },
+      "best_near_feasible": {
+        "objective": -0.34359892413258997,
+        "W_ctrl": -0.3435991735704916,
+        "Q": 0.08429862064071712,
+        "delta_E": -0.25930051745691407,
+        "purity": 0.8550769971678942,
+        "violation": 0.0
+      }
+    }
+  },
+  "methodological_notes": [
+    "Both work searches use identical local X/Y channels, five temporal knots, bounds +/-1.5, T=18 and NT=180.",
+    "SPSA outputs are best-found values, not certified global minima.",
+    "For the memory model Q=0 for the explicitly modelled closed system; omitted external reservoirs are not present in this model.",
+    "For the Lindblad model Q is integrated from the dissipator and first-law residual is delta_E-W_ctrl-Q.",
+    "The two dynamical models are not microscopically identical; a work difference is not by itself a TDT signature."
+  ]
+}

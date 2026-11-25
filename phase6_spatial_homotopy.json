@@ -1,0 +1,62 @@
+{
+  "config": {
+    "NX": 32,
+    "NT": 80,
+    "T": 0.8,
+    "dt": 0.01,
+    "nu": 0.05,
+    "tau": 0.25,
+    "Fmax_pointwise": 2.0,
+    "rate_max_pointwise": 10.0,
+    "projection": "each time step: scale real-space delta field to rate bound, then scale real-space force field to amplitude bound",
+    "target": "sample 1 initial field; source is zero-control terminal field from sample 0",
+    "objective": "continuation of soft normalized endpoint mismatch plus small actuator effort/slew terms; not exact endpoint constrained and not a certified global minimum"
+  },
+  "stages": [
+    {
+      "weight": 100.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 180,
+      "objective": 96.74899631394527,
+      "endpoint_u_rms": 0.5515740907462381,
+      "endpoint_q_rms": 0.01198400773003502,
+      "max_abs_f_space": 1.9988402969902366,
+      "max_abs_dfdt_space": 10.000000000000053
+    },
+    {
+      "weight": 1000.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 180,
+      "objective": 947.593298092182,
+      "endpoint_u_rms": 0.5465745291954581,
+      "endpoint_q_rms": 0.011834265957934886,
+      "max_abs_f_space": 1.999093910070375,
+      "max_abs_dfdt_space": 10.000000000000043
+    },
+    {
+      "weight": 10000.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 180,
+      "objective": 9396.585112816118,
+      "endpoint_u_rms": 0.5436417966877641,
+      "endpoint_q_rms": 0.011808205047299044,
+      "max_abs_f_space": 1.9999999999999996,
+      "max_abs_dfdt_space": 10.000000000000053
+    },
+    {
+      "weight": 100000.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 180,
+      "objective": 93568.54380871383,
+      "endpoint_u_rms": 0.5432230915811371,
+      "endpoint_q_rms": 0.011756212250410375,
+      "max_abs_f_space": 1.999997528626917,
+      "max_abs_dfdt_space": 10.000000000000053
+    }
+  ],
+  "elapsed_seconds": 17.338456869125366
+}

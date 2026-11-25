@@ -1,0 +1,269 @@
+{
+  "title": "4-spin Ising physical reconstruction with 4-bit X0 register",
+  "model": {
+    "microstates": 16,
+    "register_bits": 4,
+    "beta": 0.4,
+    "kT": 2.5,
+    "J": 1.0,
+    "gamma": 1.0,
+    "observation_time": 1.0,
+    "magnetization_values": [
+      -4,
+      -2,
+      0,
+      2,
+      4
+    ],
+    "prior": "Gibbs equilibrium at zero field",
+    "observation_dynamics": "single-spin Glauber CTMC"
+  },
+  "exact_information": {
+    "H_X0_bits": 3.4964472312260817,
+    "H_M_T_bits": 2.3153246011543716,
+    "H_X0_given_M_T_bits": 3.014392866730228,
+    "I_X0_M_T_bits": 0.4820543644958537,
+    "kTln2_times_I": 0.835336559067293,
+    "kTln2_times_H_X0": 6.058881350752464,
+    "kTln2_times_H_cond": 5.223544791685171,
+    "kTln2_times_H_M": 4.012151798428081
+  },
+  "reconstruction": {
+    "sampling": {
+      "trajectories": 30000,
+      "seed": 20261113,
+      "same_sampled_X0_XT_M_for_both_controllers": true
+    },
+    "reference_M_only": {
+      "mean_actuator_work": -7.61935,
+      "se_work": 0.027135774006362235,
+      "exact_X0_reconstruction_fidelity": 0.33813333333333334,
+      "fidelity_se": 0.0027312950665830194
+    },
+    "observed_M_plus_4bit_X0": {
+      "mean_actuator_work": -6.31208,
+      "se_work": 0.029499961763446433,
+      "exact_X0_reconstruction_fidelity": 0.4503666666666667,
+      "fidelity_se": 0.0028724932969009243
+    },
+    "paired_delta_W_ref_minus_obs": {
+      "mean": -1.3072700000000002,
+      "se": 0.03466202802457216,
+      "ci95_normal": [
+        -1.3752075749281616,
+        -1.2393324250718387
+      ]
+    },
+    "controller_spec": {
+      "fields": "four independently controlled local fields; open-loop linear ramp aligned to MAP target or true X0",
+      "HMAX": 3.0,
+      "control_time": 1.0,
+      "steps": 20,
+      "dynamics": "4-spin periodic Ising ring, single-spin Glauber Gillespie",
+      "work_convention": "W=-sum_i integral <s_i> dh_i"
+    }
+  },
+  "four_bit_register_erasure": {
+    "register_bits": 4,
+    "register_states": 16,
+    "encoding": "integer state index 0..15 mapped to 4-bit binary; reset target 0000",
+    "side_information_during_reset": "M_T retained and used to select conditional energy landscape E(x|M_T)",
+    "preparation_work_weighted": 2.5373772368551535,
+    "H_X0_given_M_T_bits": 3.014392866730228,
+    "H_M_T_bits": 2.3153246011543716,
+    "runs": {
+      "10.0": {
+        "reset_stage_work": 12.352129540657064,
+        "total_prep_plus_reset_work": 14.889506777512217,
+        "weighted_final_entropy_bits": 1.6102071095553665,
+        "weighted_P000": 0.7563389035921135,
+        "weighted_dissipation": 9.666192383173382,
+        "preparation_work": 2.5373772368551535,
+        "Landauer_conditional_bound": 5.223544791685171,
+        "Landauer_gap_total_work_minus_bound": 9.665961985827046
+      },
+      "100.0": {
+        "reset_stage_work": 4.197885926128445,
+        "total_prep_plus_reset_work": 6.735263162983599,
+        "weighted_final_entropy_bits": 0.007744095105586471,
+        "weighted_P000": 0.999510540290385,
+        "weighted_dissipation": 1.5119487686447632,
+        "preparation_work": 2.5373772368551535,
+        "Landauer_conditional_bound": 5.223544791685171,
+        "Landauer_gap_total_work_minus_bound": 1.5117183712984277
+      },
+      "1000.0": {
+        "reset_stage_work": 2.827055452423998,
+        "total_prep_plus_reset_work": 5.364432689279152,
+        "weighted_final_entropy_bits": 0.0018327778039168244,
+        "weighted_P000": 0.9999017976041039,
+        "weighted_dissipation": 0.1411182949403157,
+        "preparation_work": 2.5373772368551535,
+        "Landauer_conditional_bound": 5.223544791685171,
+        "Landauer_gap_total_work_minus_bound": 0.14088789759398068
+      }
+    },
+    "M_T_reset_ideal_if_closed_cycle": 4.012151798428081,
+    "conditional_register_reset_details": [
+      {
+        "M_T": -4,
+        "tau": 10.0,
+        "P000_final": 0.9681756834802959,
+        "final_entropy_bits": 0.32755312195342057,
+        "reset_stage_work": 3.2188752693291702,
+        "deltaF_reset_stage": 1.2011712336194298,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": -4,
+        "tau": 100.0,
+        "P000_final": 0.9998383366468071,
+        "final_entropy_bits": 0.002900631270931436,
+        "reset_stage_work": 1.3824068565260885,
+        "deltaF_reset_stage": 1.2011712336194298,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": -4,
+        "tau": 1000.0,
+        "P000_final": 0.9999033752181521,
+        "final_entropy_bits": 0.0018056025446147002,
+        "reset_stage_work": 1.2186563469518124,
+        "deltaF_reset_stage": 1.2011712336194298,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": -2,
+        "tau": 10.0,
+        "P000_final": 0.9019180167359222,
+        "final_entropy_bits": 0.8450634473104686,
+        "reset_stage_work": 8.276814737361969,
+        "deltaF_reset_stage": 3.0432622558422437,
+        "detailed_balance_residual": 1.734723475976807e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": -2,
+        "tau": 100.0,
+        "P000_final": 0.999803768750818,
+        "final_entropy_bits": 0.003465762997115227,
+        "reset_stage_work": 3.5098667418898435,
+        "deltaF_reset_stage": 3.0432622558422437,
+        "detailed_balance_residual": 1.734723475976807e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": -2,
+        "tau": 1000.0,
+        "P000_final": 0.9999024307736976,
+        "final_entropy_bits": 0.0018218808461052066,
+        "reset_stage_work": 3.086983537141148,
+        "deltaF_reset_stage": 3.0432622558422437,
+        "detailed_balance_residual": 1.734723475976807e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 0,
+        "tau": 10.0,
+        "P000_final": 0.7914609028977614,
+        "final_entropy_bits": 1.5504998117791942,
+        "reset_stage_work": 14.629600950384253,
+        "deltaF_reset_stage": 5.376705466385993,
+        "detailed_balance_residual": 2.7755575615628914e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 0,
+        "tau": 100.0,
+        "P000_final": 0.9997465283524588,
+        "final_entropy_bits": 0.004382693952529172,
+        "reset_stage_work": 6.339957936867623,
+        "deltaF_reset_stage": 5.376705466385993,
+        "detailed_balance_residual": 2.7755575615628914e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 0,
+        "tau": 1000.0,
+        "P000_final": 0.9999016871140934,
+        "final_entropy_bits": 0.0018346889508322735,
+        "reset_stage_work": 5.464554906678902,
+        "deltaF_reset_stage": 5.376705466385993,
+        "detailed_balance_residual": 2.7755575615628914e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 2,
+        "tau": 10.0,
+        "P000_final": 0.6495376598997025,
+        "final_entropy_bits": 2.2970556183991637,
+        "reset_stage_work": 16.59905708029047,
+        "deltaF_reset_stage": 3.0432622558422433,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 2,
+        "tau": 100.0,
+        "P000_final": 0.9995819183412371,
+        "final_entropy_bits": 0.006925855347144601,
+        "reset_stage_work": 4.943498357826214,
+        "deltaF_reset_stage": 3.0432622558422433,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 2,
+        "tau": 1000.0,
+        "P000_final": 0.9999010504523267,
+        "final_entropy_bits": 0.0018456476032408374,
+        "reset_stage_work": 3.2144433328293593,
+        "deltaF_reset_stage": 3.0432622558422433,
+        "detailed_balance_residual": 2.0816681711721685e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 4,
+        "tau": 10.0,
+        "P000_final": 0.48195831877504364,
+        "final_entropy_bits": 3.0091775567288868,
+        "reset_stage_work": 19.321868058202405,
+        "deltaF_reset_stage": 1.201171233619429,
+        "detailed_balance_residual": 2.42861286636753e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 4,
+        "tau": 100.0,
+        "P000_final": 0.9986784733345665,
+        "final_entropy_bits": 0.01969213638724865,
+        "reset_stage_work": 5.062314817718363,
+        "deltaF_reset_stage": 1.201171233619429,
+        "detailed_balance_residual": 2.42861286636753e-17,
+        "solver_success": true
+      },
+      {
+        "M_T": 4,
+        "tau": 1000.0,
+        "P000_final": 0.999900410278306,
+        "final_entropy_bits": 0.001856660603140095,
+        "reset_stage_work": 1.5676627946920307,
+        "deltaF_reset_stage": 1.201171233619429,
+        "detailed_balance_residual": 2.42861286636753e-17,
+        "solver_success": true
+      }
+    ],
+    "caveat": "Conditional reset uses an externally retained M_T label and a side-information-dependent Hamiltonian. Barrier switching is assumed not to cost work; finite-time gate/write/read and detector costs are not modeled."
+  },
+  "interpretation": "The register contains X0, so it supplies information beyond M_T. Actuator-work difference is a finite-time control result, not an automatic Landauer prediction. The conditional register reset bound applies only while M_T is retained. If M_T is also reset, add its own reset cost. No residual is evidence of new physics unless all omitted preparation, measurement, gate, controller, and barrier costs are closed.",
+  "runtime_seconds": 75.70562529563904,
+  "checks": {
+    "Q_row_sum_error": 5.551115123125783e-17,
+    "transition_min": 0.0030341727879470196,
+    "joint_normalization_error": 0.0,
+    "H_identity_error": 0.0
+  }
+}

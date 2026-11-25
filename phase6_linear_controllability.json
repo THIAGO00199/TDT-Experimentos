@@ -1,0 +1,97 @@
+{
+  "nu": 0.05,
+  "tau": 0.25,
+  "T": 0.8,
+  "mode_results": [
+    {
+      "k": 1,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.00013306828134903822,
+        0.7832103580495778
+      ],
+      "gramian_condition": 5885.777963835096,
+      "sigma_min_controllability": 0.2
+    },
+    {
+      "k": 2,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.000541706038395446,
+        0.7354540205153193
+      ],
+      "gramian_condition": 1357.6625852164436,
+      "sigma_min_controllability": 0.4
+    },
+    {
+      "k": 3,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.0012525041506206312,
+        0.6639508162779715
+      ],
+      "gramian_condition": 530.0986954406304,
+      "sigma_min_controllability": 0.6000000000000001
+    },
+    {
+      "k": 4,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.0023022230930135074,
+        0.5788562381550966
+      ],
+      "gramian_condition": 251.4335990772291,
+      "sigma_min_controllability": 0.8
+    },
+    {
+      "k": 5,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.0037200215482790858,
+        0.4910233842319806
+      ],
+      "gramian_condition": 131.994768809641,
+      "sigma_min_controllability": 1.0
+    },
+    {
+      "k": 6,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.005492192710262503,
+        0.40983098295344855
+      ],
+      "gramian_condition": 74.62064872335122,
+      "sigma_min_controllability": 1.0
+    },
+    {
+      "k": 7,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.007512713889190118,
+        0.3416452219903091
+      ],
+      "gramian_condition": 45.4756066888019,
+      "sigma_min_controllability": 1.0
+    },
+    {
+      "k": 8,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.00955507625150468,
+        0.28922436227683923
+      ],
+      "gramian_condition": 30.269184113658305,
+      "sigma_min_controllability": 1.0
+    },
+    {
+      "k": 9,
+      "rank": 2,
+      "gramian_eigenvalues": [
+        0.011332289260095501,
+        0.25202977821967737
+      ],
+      "gramian_condition": 22.239970445084936,
+      "sigma_min_controllability": 1.0
+    }
+  ]
+}

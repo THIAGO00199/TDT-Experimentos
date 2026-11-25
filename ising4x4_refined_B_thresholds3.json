@@ -1,0 +1,102 @@
+{
+  "n": 20000,
+  "target": 0.24,
+  "results": [
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 2.2,
+      "k_success": 5207,
+      "n": 20000,
+      "fidelity": 0.26035,
+      "fidelity_ci95_wilson": [
+        0.25431473097741947,
+        0.26647731190427154
+      ],
+      "mean_work": -27.618547000000003,
+      "work_se": 0.06639748119254968
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 1.4,
+      "k_success": 5229,
+      "n": 20000,
+      "fidelity": 0.26145,
+      "fidelity_ci95_wilson": [
+        0.25540622161833987,
+        0.2675853987840277
+      ],
+      "mean_work": -17.044124999999998,
+      "work_se": 0.03453204261721446
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "ramp_hold",
+      "policy": "no_info",
+      "amplitude": 1.0,
+      "k_success": 4892,
+      "n": 20000,
+      "fidelity": 0.2446,
+      "fidelity_ci95_wilson": [
+        0.23869211148603112,
+        0.2506059805314271
+      ],
+      "mean_work": -12.284329999999999,
+      "work_se": 0.03176697309445738
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 3.7,
+      "k_success": 5456,
+      "n": 20000,
+      "fidelity": 0.2728,
+      "fidelity_ci95_wilson": [
+        0.2666712690370509,
+        0.279015992146843
+      ],
+      "mean_work": -42.38910550000001,
+      "work_se": 0.10604635063106886
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 2.2,
+      "k_success": 5261,
+      "n": 20000,
+      "fidelity": 0.26305,
+      "fidelity_ci95_wilson": [
+        0.25699393248310254,
+        0.26919707340388543
+      ],
+      "mean_work": -24.580974,
+      "work_se": 0.06648271027947421
+    },
+    {
+      "Tobs": 4.0,
+      "H": 7.43261530224826,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 2.9,
+      "k_success": 4957,
+      "n": 20000,
+      "fidelity": 0.24785,
+      "fidelity_ci95_wilson": [
+        0.24191496312990926,
+        0.25388188065318423
+      ],
+      "mean_work": -29.181424,
+      "work_se": 0.10628966756596223
+    }
+  ]
+}

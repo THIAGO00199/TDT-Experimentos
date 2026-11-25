@@ -1,0 +1,127 @@
+{
+  "model": "two qubits plus two explicit truncated harmonic modes; closed unitary dynamics",
+  "parameters": {
+    "mode_cutoff": 3,
+    "hilbert_dimension": 36,
+    "wq": [
+      1.0,
+      1.08
+    ],
+    "wa": [
+      0.82,
+      1.18
+    ],
+    "g": [
+      0.32,
+      0.32
+    ],
+    "Jzz": 0.025,
+    "T": 18.0,
+    "NT": 180,
+    "dt": 0.1
+  },
+  "backflow": {
+    "BLP_pair": "|+0> vs |-0>, both modes vacuum",
+    "D_initial": 0.9999999999999998,
+    "D_final": 0.9344553052653313,
+    "Pi_BLP_positive_variation": 0.29866391709485096,
+    "first_positive_interval_time": 1.7000000000000002,
+    "last_positive_interval_time": 16.900000000000002,
+    "positive_derivative_steps": 83
+  },
+  "baseline": {
+    "S_qubits_nats": 0.34537341134778876,
+    "purity": 0.8447720591976403,
+    "concurrence": 0.8322410140216118,
+    "energy_total": 1.0649999999999997
+  },
+  "control": {
+    "objective": "minimize final von Neumann entropy of reduced two-qubit state + 1e-4 integral(sum(u_k^2)dt)",
+    "method": "SPSA 120 iterations; 5 temporal knots per each of 4 local X/Y channels; control spans all positive-derivative backflow interval",
+    "parameter_count": 20,
+    "control_window_steps": [
+      17,
+      169
+    ],
+    "history": [
+      {
+        "iteration": 10,
+        "objective": 0.2815565746721513,
+        "best": 0.280895166177728
+      },
+      {
+        "iteration": 20,
+        "objective": 0.2673641788000203,
+        "best": 0.2673641788000203
+      },
+      {
+        "iteration": 30,
+        "objective": 0.2483514067499484,
+        "best": 0.24295600435592948
+      },
+      {
+        "iteration": 40,
+        "objective": 0.23686443506289717,
+        "best": 0.23686443506289717
+      },
+      {
+        "iteration": 50,
+        "objective": 0.2364721278775351,
+        "best": 0.2364721278775351
+      },
+      {
+        "iteration": 60,
+        "objective": 0.21613126598681706,
+        "best": 0.21415169339036055
+      },
+      {
+        "iteration": 70,
+        "objective": 0.20206469689949272,
+        "best": 0.20206469689949272
+      },
+      {
+        "iteration": 80,
+        "objective": 0.19132834569842355,
+        "best": 0.19132834569842355
+      },
+      {
+        "iteration": 90,
+        "objective": 0.17909511542446244,
+        "best": 0.17909511542446244
+      },
+      {
+        "iteration": 100,
+        "objective": 0.17882091440252554,
+        "best": 0.1783220820967447
+      },
+      {
+        "iteration": 110,
+        "objective": 0.17485318050424453,
+        "best": 0.17485318050424453
+      },
+      {
+        "iteration": 120,
+        "objective": 0.1830212900503888,
+        "best": 0.1724086541147256
+      }
+    ],
+    "random_multistart_20_best_objective": 0.2919330281242381,
+    "optimized_S_qubits_nats": 0.1716951641133718,
+    "optimized_purity": 0.9354285942312568,
+    "optimized_concurrence": 0.9056619968395938,
+    "entropy_reduction": 0.17367824723441697,
+    "purity_gain": 0.09065653503361648,
+    "control_effort_proxy_u2": 7.134900013538192,
+    "work_midpoint_estimate": -0.012307298281488164,
+    "energy_change_total": -0.0029560448948589,
+    "work_energy_balance_residual": -0.009351253386629264,
+    "runtime_seconds": 143.81897354125977
+  },
+  "thermodynamic_bound_note": "No numerical quantum-thermodynamic minimum-work bound is asserted: this is a finite closed unitary system with vacuum modes, not an isothermal reservoir. For a specified closed-system protocol, work equals the total energy change; an isothermal bound W>=Delta F would require a thermal bath and a defined initial/final global state and Hamiltonian. The entropy objective alone does not define a unique reversible work target.",
+  "caveats": [
+    "The BLP quantity is a one-pair witness, not TDT debt.",
+    "Local reduced entropy minimization can restore purity without restoring the initial Bell state.",
+    "The work estimate is a midpoint discretization and its energy-balance residual is reported; it is not a universal actuator-cost measure.",
+    "A fair TDT test requires matched target constraints and a conventional optimal-control lower bound under the same Hamiltonian and accessible controls."
+  ]
+}

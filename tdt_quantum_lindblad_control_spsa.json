@@ -1,0 +1,441 @@
+{
+  "model": "2 qubits + one truncated oscillator + thermal Lindblad reservoir",
+  "optimizer": "SPSA, 60 iterations, 12 smooth open-loop pulse coefficients",
+  "control_channels": [
+    "X_q1",
+    "Y_q1",
+    "X_q2",
+    "Y_q2"
+  ],
+  "basis": "sin(pi*t/T) times Legendre modes k=0,1,2",
+  "objective": "1 - Bell-state fidelity of reduced two-qubit state + 0.001*integral(sum_j u_j(t)^2 dt)",
+  "baseline": {
+    "fidelity": 0.6603381257970611,
+    "infidelity": 0.3396618742029389,
+    "work_control": 0.0,
+    "control_effort_integral_u2": 0.0,
+    "metrics": {
+      "S_qubits": 0.3207727155595438,
+      "S_osc": 0.41027605730165995,
+      "S_total": 0.6208398807996779,
+      "I_qubits_osc": 0.11020889206152584,
+      "negativity_qubits_osc": 0.050976118679068705,
+      "concurrence_qubits": 0.8772372855579617,
+      "purity_qubits": 0.8602645145573211,
+      "purity_global": 0.7308817194749242,
+      "trace_error": 3.3306711209080853e-15
+    }
+  },
+  "optimized": {
+    "fidelity": 0.6603381257970611,
+    "infidelity": 0.3396618742029389,
+    "work_control": 0.0,
+    "control_effort_integral_u2": 0.0,
+    "metrics": {
+      "S_qubits": 0.3207727155595438,
+      "S_osc": 0.41027605730165995,
+      "S_total": 0.6208398807996779,
+      "I_qubits_osc": 0.11020889206152584,
+      "negativity_qubits_osc": 0.050976118679068705,
+      "concurrence_qubits": 0.8772372855579617,
+      "purity_qubits": 0.8602645145573211,
+      "purity_global": 0.7308817194749242,
+      "trace_error": 3.3306711209080853e-15
+    }
+  },
+  "theta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "history": [
+    {
+      "iteration": 1,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 2,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 3,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 4,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 5,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 6,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 7,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 8,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 9,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 10,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 11,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 12,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 13,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 14,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 15,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 16,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 17,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 18,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 19,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 20,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 21,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 22,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 23,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 24,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 25,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 26,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 27,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 28,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 29,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 30,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 31,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 32,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 33,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 34,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 35,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 36,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 37,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 38,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 39,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 40,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 41,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 42,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 43,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 44,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 45,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 46,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 47,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 48,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 49,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 50,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 51,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 52,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 53,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 54,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 55,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 56,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 57,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 58,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 59,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    },
+    {
+      "iteration": 60,
+      "objective": 0.3396618742029389,
+      "best_objective": 0.3396618742029389,
+      "spsa_gradient_norm": 0.0
+    }
+  ],
+  "parameters": {
+    "iterations": 60,
+    "coefficient_bounds": [
+      -1.5,
+      1.5
+    ],
+    "spsa_a": 0.12,
+    "spsa_c": 0.1,
+    "spsa_A": 20,
+    "spsa_alpha": 0.602,
+    "spsa_gamma": 0.101,
+    "T": 8.0,
+    "dt": 0.04,
+    "steps": 200,
+    "g": 0.38,
+    "kappa": 0.18,
+    "nbar": 0.12
+  },
+  "warning": "This is an open-loop pulse benchmark. The objective regularizer integral(u^2) is a control-effort proxy, not thermodynamic work. Signed work is separately calculated as sum Tr(rho O_j) delta u_j."
+}

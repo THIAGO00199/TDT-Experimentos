@@ -1,0 +1,141 @@
+DEMONIO DA MANUTENCAO — RELATORIO CONSOLIDADO
+Data: 2026-11-13
+Diretorio: /home/iknowyou/TDT_Experimentos/
+
+1. ESCOPO E RESSALVAS
+Implementado controlador feedforward (agenda aberta de campos, nao feedback) para acompanhar as distribuicoes A e B por T=4.
+O modelo e um anel Ising de 8 spins, 256 microestados, com dinamica de Glauber CTMC e banho termico Markoviano implicito em kBT=1. NAO e ainda o banho finito explicito de Creutz.
+A distribuicao B e inserida exatamente como condicao inicial matematica. A preparacao fisica de B por pulso continua nao demonstrada.
+Portanto, isto e um piloto de controle/termodinamica estocastica, nao um experimento fisico nem uma prova/refutacao definitiva da TDT.
+
+2. MODELO
+N=8, periodic ring, J=1, hf=1, kBT=1, beta=1, gamma=1.
+Taxas: w_i(s;u)=gamma/[1+exp(beta*DeltaE_i(s;u)/kBT)].
+Hamiltoniano instantaneo:
+  H(s,t)= -J sum_i s_i s_(i+1) - hf sum_i s_i - sum_i u_i(t)s_i.
+Master equation exata para 256 probabilidades, integrada por RK4.
+Horizon T=4; 8 segmentos lineares de controle; 9 nos. u_i(0)=u_i(T)=0; |u_i|<=3.
+Objetivo identico para A/B:
+  Jctrl = avg_t KL(p(t)||p_target)
+          + lambda_u avg_t sum_i u_i^2
+          + lambda_du avg_t sum_i dot(u_i)^2.
+Baseline lambda_u=0.01, lambda_du=0.0002.
+Trabalho:
+  Wdot = -sum_i dot(u_i)<s_i>, sinal positivo = trabalho sobre o sistema.
+Entrópia de Schnakenberg integrada diretamente das correntes microscópicas, independente de W e Fneq.
+
+3. DISTRIBUICOES INICIAIS
+A: Gibbs para Hamiltoniano original hf=1.
+  E=-15.856600725860700
+  M=7.947473768576358
+  Fneq=-16.022825728764193
+  S=0.16622500290349346 nats
+
+B: ansatz pB proporcional a exp[-beta_B Eint + lambda_B M + alpha*s0*s1], recalibrado para igualar E e M de A.
+  alpha=1.5
+  beta_B=0.9317897717601453
+  lambda_B=1.000137526600246
+  E=-15.856600725860702
+  M=7.947473768576358
+  Fneq=-16.017767983287076
+  delta Fneq B-A=+0.005057745477117237
+  KL(B||A)=0.005057745477116133 nats
+  L1(B,A)=0.01064226464077115
+
+Correlacoes iniciais B nos oito elos:
+  [0.999254200, 0.991204493, 0.985922918, 0.985232255,
+   0.985153424, 0.985232255, 0.985922918, 0.991204493]
+A tem todas as correlacoes aproximadamente 0.988640870.
+
+4. BASELINE SEM CONTROLE
+A permanece em Gibbs:
+  W=0, SigmaSch ~ 0, deltaF=0, KL media=0.
+B sem controle:
+  W=0
+  SigmaSch=0.005055192643644524 nats
+  deltaFneq=-0.0050551815631685315
+  residual classico=-1.108e-8
+  KL media para alvo B=0.007652028147665209
+  KL final=0.01052242900015025
+  L1 final-alvo=0.010414312112952618
+
+5. CONTROLE OTIMIZADO — PARAMETROS PADRAO
+A:
+  otimizador escolheu u(t)=0; KL media=0, W=0.
+
+B:
+  maximo |u_i| nos nos = 0.336169.
+  Agenda de controle tem u0=u1 positivos (~0.26-0.34 na parte inicial) e pequenos campos negativos nos outros seis sitios; os campos retornam a zero em T.
+  W_net=-0.0011560302925351469
+  W_input_gross=0.5027104414223968
+  W_recovered_gross=0.5038664717149324
+  W_net/T=-0.0002890075731337867
+  Sigma_Sch=0.00352298571783806 nats
+  deltaFneq=-0.0046790021403673165
+  residual do balanco=-1.3870005890342929e-8
+  KL media para alvo B=0.003866622851725769
+  KL final=0.00651061765895635
+  L1 final-alvo=0.009223419011958448
+  E final=-15.862961607478276
+  M final=7.949958108955771
+
+Comparacao:
+  KL media cai de 0.00765203 (sem controle) para 0.00386662 (com controle), reducao de ~49.5%.
+  KL final cai de 0.01052243 para 0.00651062, reducao de ~38.1%.
+  O controle retarda a perda da memoria de correlacao, mas nao conserva pB exatamente.
+  O trabalho liquido e negativo: o protocolo recebe ~0.50271 de trabalho e devolve ~0.50387; ha pequena extracao liquida (~0.001156), nao excesso positivo de trabalho.
+
+6. SENSIBILIDADE AO PESO DE CONTROLE
+lambda_du=0.0002 fixo; lambda_u variado. Valores iniciais e modelo iguais.
+lambda_u=0.001:
+  Wnet=+0.0001191799127; Winput=1.0223718529; Wreturn=1.0222526730
+  Sigma=0.003603522735; deltaF=-0.003484325407
+  residual=-1.7415e-8; KL media=0.001465864764; KL final=0.003184788569
+  max|u|=0.764909
+lambda_u=0.01:
+  Wnet=-0.001156030293; Winput=0.5027104414; Wreturn=0.5038664717
+  Sigma=0.003522985718; deltaF=-0.004679002140
+  residual=-1.3870e-8; KL media=0.003866622852; KL final=0.006510617659
+  max|u|=0.336169
+lambda_u=0.1:
+  Wnet=-0.000410954764; Winput=0.1186030760; Wreturn=0.1190140308
+  Sigma=0.004621294232; deltaF=-0.005032237376
+  residual=-1.1619e-8; KL media=0.006733584120; KL final=0.009653764989
+  max|u|=0.067472
+O sinal do trabalho liquido muda com a escolha do peso de regularizacao. Logo, Wman(B)-Wman(A) isoladamente nao e um excesso universal nem uma assinatura da TDT.
+
+7. RESIDUO EM RELACAO AO MODELO CLASSICO
+Foi calculado:
+  Wclassic = [deltaFneq_B-deltaFneq_A] + kBT[ sigmaSch_B-sigmaSch_A ]
+com sigmaSch integrado independentemente das correntes de Markov.
+  Wman(B)-Wman(A) = -0.0011560302925351469
+  Wclassic             = -0.0011560164225292565
+  PiDin residual       = -1.3870005890342929e-8
+O residuo e compativel com erro de integracao, nao e positivo e nao indica excesso de manutencao alem do modelo classico.
+
+8. VALIDACAO DE PASSO TEMPORAL
+Reavaliacao com o dobro de subpassos RK4 por segmento (40, em vez de 20), mantendo a agenda de controle:
+  A: balance residual ~ -8.15e-34
+  B sem controle: residual=-7.2451e-10
+  B otimizado: W=-0.00115603030698
+              Sigma=0.00352297273808
+              deltaF=-0.00467900213921
+              residual=-9.0585e-10
+A conclusao nao depende do passo original.
+
+9. INTERPRETACAO
+- O controlador ativo conseguiu retardar parcialmente a relaxacao de B.
+- Nao conseguiu manter a distribuicao B exatamente; KL final permanece >0.
+- No peso de regularizacao padrao, trabalho liquido foi extraido, nao consumido.
+- A diferenca B-A de trabalho e explicada pela termodinamica estocastica classica com producao de entropia calculada independentemente.
+- PiDin ~ 0 no modelo de Glauber, como exigido pelo balanço local detalhado.
+- Isso nao refuta por si so a TDT no mundo fisico: a simulacao usa o modelo classico e nao contem um termo dinamico extra de debito. Demonstra que a definicao atual nao gera previsao independente dentro deste modelo.
+- Para uma TDT testavel, especificar previamente qual mecanismo/variavel adicional muda as taxas, o Hamiltoniano, o reservatorio ou o custo do controlador, e qual sinal/magnitude quantitativa deve surgir fora da previsao classica.
+
+10. ARQUIVOS
+demon_manutencao_8spin.py
+demon_manutencao_8spin_resultado.json
+demon_manutencao_8spin_resultado.txt
+demon_manutencao_8spin_sensitivity.py
+demon_manutencao_8spin_sensitivity.json
+validate_demon_manutencao_refinement.py

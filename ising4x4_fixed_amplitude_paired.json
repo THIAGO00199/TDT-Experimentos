@@ -1,0 +1,87 @@
+{
+  "amplitude": 1.5,
+  "trajectories_per_horizon": 5000,
+  "results": [
+    {
+      "Tobs": 0.25,
+      "H_X0_given_M_T_bits": 6.080028711881588,
+      "fidelity_no_info": 0.3178,
+      "fidelity_with_X0": 0.348,
+      "work_no_info": -17.83374,
+      "work_with_X0": -20.677290000000003,
+      "delta_work_no_info_minus_with_X0": 2.8435500000000005,
+      "delta_work_paired_se": 0.0937621834691886,
+      "delta_work_ci95": [
+        2.659776120400391,
+        3.02732387959961
+      ],
+      "fidelity_se_no_info": 0.006584879042169264,
+      "fidelity_se_with_X0": 0.006736408538679939
+    },
+    {
+      "Tobs": 0.5,
+      "H_X0_given_M_T_bits": 6.483170167169313,
+      "fidelity_no_info": 0.2818,
+      "fidelity_with_X0": 0.3062,
+      "work_no_info": -18.1761,
+      "work_with_X0": -19.68111,
+      "delta_work_no_info_minus_with_X0": 1.50501,
+      "delta_work_paired_se": 0.08660762700935316,
+      "delta_work_ci95": [
+        1.3352590510616678,
+        1.6747609489383322
+      ],
+      "fidelity_se_no_info": 0.00636221282259561,
+      "fidelity_se_with_X0": 0.006518305914883099
+    },
+    {
+      "Tobs": 1.0,
+      "H_X0_given_M_T_bits": 6.854905134675899,
+      "fidelity_no_info": 0.2446,
+      "fidelity_with_X0": 0.2566,
+      "work_no_info": -18.76212,
+      "work_with_X0": -18.26235,
+      "delta_work_no_info_minus_with_X0": -0.49977000000000005,
+      "delta_work_paired_se": 0.07572571007295481,
+      "delta_work_ci95": [
+        -0.6481923917429915,
+        -0.3513476082570086
+      ],
+      "fidelity_se_no_info": 0.0060789939957200155,
+      "fidelity_se_with_X0": 0.006176672890804563
+    },
+    {
+      "Tobs": 2.0,
+      "H_X0_given_M_T_bits": 7.1715088968349425,
+      "fidelity_no_info": 0.2158,
+      "fidelity_with_X0": 0.2282,
+      "work_no_info": -18.88488,
+      "work_with_X0": -16.71078,
+      "delta_work_no_info_minus_with_X0": -2.1741000000000006,
+      "delta_work_paired_se": 0.07396876850227228,
+      "delta_work_ci95": [
+        -2.319078786264454,
+        -2.029121213735547
+      ],
+      "fidelity_se_no_info": 0.005817737704640868,
+      "fidelity_se_with_X0": 0.0059350612465247565
+    },
+    {
+      "Tobs": 4.0,
+      "H_X0_given_M_T_bits": 7.43261530224826,
+      "fidelity_no_info": 0.1804,
+      "fidelity_with_X0": 0.178,
+      "work_no_info": -18.897809999999996,
+      "work_with_X0": -14.9688,
+      "delta_work_no_info_minus_with_X0": -3.929010000000001,
+      "delta_work_paired_se": 0.09289838860874401,
+      "delta_work_ci95": [
+        -4.111090841673139,
+        -3.7469291583268625
+      ],
+      "fidelity_se_no_info": 0.005437937844440666,
+      "fidelity_se_with_X0": 0.005409547115979303
+    }
+  ],
+  "runtime_seconds": 67.36985659599304
+}

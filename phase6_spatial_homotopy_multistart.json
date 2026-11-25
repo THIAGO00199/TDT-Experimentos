@@ -1,0 +1,268 @@
+{
+  "config": {
+    "NX": 32,
+    "NT": 80,
+    "T": 0.8,
+    "dt": 0.01,
+    "nu": 0.05,
+    "tau": 0.25,
+    "Fmax_pointwise": 2.0,
+    "rate_max_pointwise": 10.0,
+    "state_projection": "at every RK4 stage, retain only Fourier modes 1<=|k|<=10; explicitly remove DC means in both u and q",
+    "control_projection": "18 real sine/cosine actuators k=1..9; pointwise spatial amplitude and rate bounds",
+    "projection": "each time step: scale real-space force field to amplitude bound, then scale real-space delta field to rate bound",
+    "target": "sample 1 initial field projected into zero-mean 2/3 subspace; source is projected zero-control terminal field from sample 0",
+    "active_state_dimension": 42,
+    "controlled_subspace_dimension": 40,
+    "dc_means_removed": true,
+    "objective": "continuation of soft normalized endpoint mismatch plus small actuator effort/slew terms; not exact endpoint constrained and not a certified global minimum"
+  },
+  "runs": [
+    {
+      "trial": 0,
+      "stages": [
+        {
+          "weight": 100.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 93.72535735138653,
+          "endpoint_u_rms": 0.535843142013298,
+          "endpoint_q_rms": 0.01205015930791615,
+          "max_abs_f_space": 2.000000000000001,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 1000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 921.8850723917401,
+          "endpoint_u_rms": 0.5287581550373692,
+          "endpoint_q_rms": 0.012045451537658139,
+          "max_abs_f_space": 1.9996365369928817,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 10000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 9137.202372675927,
+          "endpoint_u_rms": 0.5259652937896451,
+          "endpoint_q_rms": 0.012007641406084152,
+          "max_abs_f_space": 1.9999078357044504,
+          "max_abs_dfdt_space": 10.000000000000075
+        },
+        {
+          "weight": 100000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 90914.67522868847,
+          "endpoint_u_rms": 0.523766255517709,
+          "endpoint_q_rms": 0.01200836042439442,
+          "max_abs_f_space": 2.0,
+          "max_abs_dfdt_space": 10.000000000000075
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "stages": [
+        {
+          "weight": 100.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 89.19232462049105,
+          "endpoint_u_rms": 0.5090058802283904,
+          "endpoint_q_rms": 0.012227273323195635,
+          "max_abs_f_space": 1.9875754481575434,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 1000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 877.0649686558176,
+          "endpoint_u_rms": 0.5091314740137028,
+          "endpoint_q_rms": 0.011977504432270513,
+          "max_abs_f_space": 1.9972300057814267,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 10000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 8670.265489264335,
+          "endpoint_u_rms": 0.5058128199830332,
+          "endpoint_q_rms": 0.011922238027498857,
+          "max_abs_f_space": 1.9994187540269395,
+          "max_abs_dfdt_space": 10.000000000000043
+        },
+        {
+          "weight": 100000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 86143.39155291178,
+          "endpoint_u_rms": 0.5045930924765955,
+          "endpoint_q_rms": 0.01186965084670906,
+          "max_abs_f_space": 1.9985168034518563,
+          "max_abs_dfdt_space": 10.000000000000043
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "stages": [
+        {
+          "weight": 100.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 89.19215186386165,
+          "endpoint_u_rms": 0.5088674135367378,
+          "endpoint_q_rms": 0.012231854789589621,
+          "max_abs_f_space": 1.999414296963938,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 1000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 871.3320861485714,
+          "endpoint_u_rms": 0.5036518842096287,
+          "endpoint_q_rms": 0.012066773797998575,
+          "max_abs_f_space": 1.9998900004536526,
+          "max_abs_dfdt_space": 10.00000000000003
+        },
+        {
+          "weight": 10000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 8622.52192157157,
+          "endpoint_u_rms": 0.5007037091616108,
+          "endpoint_q_rms": 0.01201431692963788,
+          "max_abs_f_space": 1.9997851436026606,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 100000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 85669.98891151464,
+          "endpoint_u_rms": 0.5000848221423035,
+          "endpoint_q_rms": 0.011942293522806763,
+          "max_abs_f_space": 1.9976436215378621,
+          "max_abs_dfdt_space": 10.000000000000053
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "stages": [
+        {
+          "weight": 100.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 87.43836186576233,
+          "endpoint_u_rms": 0.5160964698884661,
+          "endpoint_q_rms": 0.011690837453855414,
+          "max_abs_f_space": 1.9955038473955378,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 1000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 855.1458874275318,
+          "endpoint_u_rms": 0.5118938741906908,
+          "endpoint_q_rms": 0.011508113064200689,
+          "max_abs_f_space": 1.9994170496177144,
+          "max_abs_dfdt_space": 10.000000000000075
+        },
+        {
+          "weight": 10000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 8476.706941668737,
+          "endpoint_u_rms": 0.5078322077102357,
+          "endpoint_q_rms": 0.01152214889848526,
+          "max_abs_f_space": 1.9997580332025822,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 100000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 84394.90620706293,
+          "endpoint_u_rms": 0.5072211852484703,
+          "endpoint_q_rms": 0.011478999225029252,
+          "max_abs_f_space": 1.995053319195754,
+          "max_abs_dfdt_space": 10.000000000000053
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "stages": [
+        {
+          "weight": 100.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 88.01755034726315,
+          "endpoint_u_rms": 0.5125889917257034,
+          "endpoint_q_rms": 0.011911289478505926,
+          "max_abs_f_space": 1.9999999999999996,
+          "max_abs_dfdt_space": 10.000000000000075
+        },
+        {
+          "weight": 1000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 850.0715146636225,
+          "endpoint_u_rms": 0.5001503075119369,
+          "endpoint_q_rms": 0.011828551275298716,
+          "max_abs_f_space": 1.9998096792661848,
+          "max_abs_dfdt_space": 10.000000000000053
+        },
+        {
+          "weight": 10000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 8425.74861712385,
+          "endpoint_u_rms": 0.49761815331224646,
+          "endpoint_q_rms": 0.011787158436753957,
+          "max_abs_f_space": 2.0,
+          "max_abs_dfdt_space": 10.000000000000075
+        },
+        {
+          "weight": 100000.0,
+          "success": false,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "iterations": 500,
+          "objective": 83965.97405836581,
+          "endpoint_u_rms": 0.49693826554357845,
+          "endpoint_q_rms": 0.011760611719756557,
+          "max_abs_f_space": 1.9999982110413546,
+          "max_abs_dfdt_space": 10.000000000000053
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 494.80799627304077
+}

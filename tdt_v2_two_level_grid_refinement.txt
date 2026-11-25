@@ -1,0 +1,17 @@
+TDT v2 two-level fixed-horizon grid refinement
+GARUDA-bat execution, 2026-11-13
+beta=1, kBT=1, gamma=1, lambda_A=-4, lambda_B=+4
+Drive horizon fixed at 8 units; endpoint hold=20; monotone controls; exact two-state master equation.
+
+n_segments  dt        W_forward       D_forward      W_reverse      D_reverse
+16           0.5       4.730614806633  0.730614806633 -3.269385193365 0.730614806635
+32           0.25      4.703193979648  0.703193979648 -3.296806020282 0.703193979718
+64           0.125     4.692039373551  0.692039373551 -3.307960626687 0.692039373313
+
+For n=16 and n=32, the original four-start optimizers converged.
+For n=64, after increasing maxfun, all four starts converged for both directions.
+Best 64-segment optimizer objective:
+ forward = 4.692039373550567
+ reverse = -3.3079606266874375
+
+For all displayed paths, the exact integrated entropy production matches W - DeltaF to floating-point precision (residual approximately 1e-15).

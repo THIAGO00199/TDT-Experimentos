@@ -1,0 +1,12 @@
+DEMONIO DA MANUTENCAO — CREUTZ — BANHO DE 8 SPINS
+
+Modelo: 8 spins do sistema + 8 spins do banho, anel de 16 sitios, J=1; campo hf=1 apenas no sistema; demon inicial 0, limitado entre 0 e 20. A/B sao as distribuicoes exatas do sistema, amostradas independentemente do banho uniforme inicial. Controle local em oito campos, 50 sweeps, cinco coeficientes por sitio.
+
+A: E=-14.7186814462 M=7.86731161727 Fneq=-15.0584699196 H=0.339788473437
+B: E=-14.7186814462 M=7.86731161727 Fneq=-15.0398684578 H=0.321187011627 KL(B||A)=0.0186014618108
+No control A:
+No control B:
+Optimized A:
+Optimized B:
+Paired dW(B-A)=0.00381526792628 SE=0.0013205108474
+Pathwise mean energy balance residual A=2.83615429753e-15 B=-1.23503145211e-15; max abs residual A=1.82076576039e-14 B=1.73819292293e-14

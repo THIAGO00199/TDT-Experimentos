@@ -1,0 +1,23 @@
+{
+  "validation": "same piecewise-constant controls, same initial state, RK4 dt halved from 0.01 to 0.005",
+  "cases": [
+    {
+      "case": "original_F2_rate10_lambda100",
+      "dt": 0.005,
+      "delta_H": -1.3141366425667758,
+      "W_work": -1.207067075286147,
+      "D_dissipation": 0.10706956736897362,
+      "R_E": -8.834484532815878e-11,
+      "relative_residual": -6.722652916488453e-11
+    },
+    {
+      "case": "expanded_F10_rate50_lambda100",
+      "dt": 0.005,
+      "delta_H": 0.07726984075130106,
+      "W_work": 0.1552883411831154,
+      "D_dissipation": 0.07801850151541682,
+      "R_E": -1.0836024716409653e-09,
+      "relative_residual": -6.9780027488553406e-09
+    }
+  ]
+}

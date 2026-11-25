@@ -1,0 +1,119 @@
+{
+  "n": 20000,
+  "target": 0.24,
+  "results": [
+    {
+      "Tobs": 0.5,
+      "H": 6.483170167169313,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 1.0,
+      "k_success": 5371,
+      "n": 20000,
+      "fidelity": 0.26855,
+      "fidelity_ci95_wilson": [
+        0.2624524771615625,
+        0.2747364163288084
+      ],
+      "mean_work": -12.00085,
+      "work_se": 0.03633371328134574
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "no_info",
+      "amplitude": 2.3,
+      "k_success": 5282,
+      "n": 20000,
+      "fidelity": 0.2641,
+      "fidelity_ci95_wilson": [
+        0.2580359242314046,
+        0.27025467837986555
+      ],
+      "mean_work": -29.101186999999992,
+      "work_se": 0.06886366162386488
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 1.5,
+      "k_success": 5164,
+      "n": 20000,
+      "fidelity": 0.2582,
+      "fidelity_ci95_wilson": [
+        0.25218150628984376,
+        0.2643113623468884
+      ],
+      "mean_work": -18.233475,
+      "work_se": 0.03692618902473615
+    },
+    {
+      "Tobs": 1.0,
+      "H": 6.854905134675899,
+      "family": "ramp_hold",
+      "policy": "no_info",
+      "amplitude": 1.0,
+      "k_success": 4886,
+      "n": 20000,
+      "fidelity": 0.2443,
+      "fidelity_ci95_wilson": [
+        0.238394640614899,
+        0.25030356662419284
+      ],
+      "mean_work": -12.254040000000002,
+      "work_se": 0.032148773866246524
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "linear",
+      "policy": "with_X0",
+      "amplitude": 3.8,
+      "k_success": 5657,
+      "n": 20000,
+      "fidelity": 0.28285,
+      "fidelity_ci95_wilson": [
+        0.27665026960339295,
+        0.2891331316557733
+      ],
+      "mean_work": -43.759964,
+      "work_se": 0.10789360469199213
+    },
+    {
+      "Tobs": 2.0,
+      "H": 7.1715088968349425,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 2.3,
+      "k_success": 5216,
+      "n": 20000,
+      "fidelity": 0.2608,
+      "fidelity_ci95_wilson": [
+        0.25476124389330673,
+        0.2669306261559337
+      ],
+      "mean_work": -25.611143999999996,
+      "work_se": 0.06905304962669162
+    },
+    {
+      "Tobs": 4.0,
+      "H": 7.43261530224826,
+      "family": "ramp_hold",
+      "policy": "with_X0",
+      "amplitude": 3.0,
+      "k_success": 4820,
+      "n": 20000,
+      "fidelity": 0.241,
+      "fidelity_ci95_wilson": [
+        0.23512272146631966,
+        0.2469767532107425
+      ],
+      "mean_work": -30.007380000000005,
+      "work_se": 0.1098823042296581
+    }
+  ],
+  "note": "Further downward threshold bracketing on the 0.1 amplitude grid; independent samples."
+}

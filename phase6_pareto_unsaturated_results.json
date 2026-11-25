@@ -1,0 +1,124 @@
+{
+  "config": {
+    "Fmax_spatial": 10.0,
+    "rate_max_spatial": 50.0,
+    "lambda_q_values": [
+      10.0,
+      30.0,
+      100.0
+    ],
+    "warm_start": "saved original-bound lambda=100 control; continuation 10 -> 30 -> 100",
+    "same_NX_NT_T_nu_tau_and_endpoint_pair": true,
+    "objective": "normalized MSE_u + lambda_q normalized MSE_q + original effort/slew regularizers",
+    "limitations": "local optimization; finite-dimensional projected model; not proof of topology"
+  },
+  "original_bounds_lambda100": {
+    "label": "original_bounds_F2_rate10_lambda100",
+    "q_endpoint_rms": 0.010765599813732653,
+    "modes": [
+      {
+        "k": 1,
+        "target_mode_rms": 1.7167517533398995e-19,
+        "residual_mode_rms": 0.009937468922625247,
+        "relative_mode_error": 5.788529939307913e+16
+      },
+      {
+        "k": 2,
+        "target_mode_rms": 8.49929198070994e-19,
+        "residual_mode_rms": 0.0034295338157465855,
+        "relative_mode_error": 4035081773312703.0
+      },
+      {
+        "k": 3,
+        "target_mode_rms": 9.521699712884566e-19,
+        "residual_mode_rms": 0.0010679985406107618,
+        "relative_mode_error": 1121646946253143.1
+      },
+      {
+        "k": 4,
+        "target_mode_rms": 0.0003788554350435125,
+        "residual_mode_rms": 0.0006422079762841936,
+        "relative_mode_error": 1.695126734054731
+      },
+      {
+        "k": 5,
+        "target_mode_rms": 0.0002022945209841753,
+        "residual_mode_rms": 0.0001991013440618085,
+        "relative_mode_error": 0.9842152080697402
+      },
+      {
+        "k": 6,
+        "target_mode_rms": 0.000901989554467809,
+        "residual_mode_rms": 0.0003436108028688407,
+        "relative_mode_error": 0.38094765196208685
+      },
+      {
+        "k": 7,
+        "target_mode_rms": 0.000499652678812633,
+        "residual_mode_rms": 0.00037261702983075885,
+        "relative_mode_error": 0.7457520906647399
+      },
+      {
+        "k": 8,
+        "target_mode_rms": 0.0002814458208096621,
+        "residual_mode_rms": 0.0001935492784771551,
+        "relative_mode_error": 0.6876964025273261
+      },
+      {
+        "k": 9,
+        "target_mode_rms": 0.0006888220198907279,
+        "residual_mode_rms": 0.00024943572767483304,
+        "relative_mode_error": 0.3621192709756906
+      },
+      {
+        "k": 10,
+        "target_mode_rms": 5.916729766976539e-19,
+        "residual_mode_rms": 0.0018530687831227056,
+        "relative_mode_error": 3131913837711901.5
+      }
+    ]
+  },
+  "expanded_runs": [
+    {
+      "lambda_q": 10.0,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 946,
+      "objective": 1.8935613659041738e-05,
+      "endpoint_u_rms": 9.504574114138306e-05,
+      "endpoint_q_rms": 4.4624903255420294e-08,
+      "max_abs_force_space": 10.0,
+      "max_abs_rate_space": 50.00000000000018,
+      "amplitude_bound_active": true,
+      "rate_bound_active": true
+    },
+    {
+      "lambda_q": 30.0,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 20,
+      "objective": 1.8935167021214825e-05,
+      "endpoint_u_rms": 9.267354163484529e-05,
+      "endpoint_q_rms": 8.180395450372004e-09,
+      "max_abs_force_space": 10.000000000000002,
+      "max_abs_rate_space": 50.00000000000018,
+      "amplitude_bound_active": true,
+      "rate_bound_active": true
+    },
+    {
+      "lambda_q": 100.0,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 4,
+      "objective": 1.8935170470089807e-05,
+      "endpoint_u_rms": 9.269015485277455e-05,
+      "endpoint_q_rms": 3.6337054409215042e-09,
+      "max_abs_force_space": 10.000000000000002,
+      "max_abs_rate_space": 50.00000000000018,
+      "amplitude_bound_active": true,
+      "rate_bound_active": true
+    }
+  ],
+  "controls_file": "/home/iknowyou/TDT_Experimentos/phase6_pareto_controls_F10_R50.npz",
+  "elapsed_seconds": 52.166229009628296
+}
